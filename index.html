@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sambahsa APP</title>
+        <link rel="stylesheet" href="resources/css/styles.css">
+        <script src="main.js" defer></script>
+        <script src="resources/js/sambahsa_pronunciator.js" defer></script>
+        <script src="resources/js/js_dictionar.js" defer></script>
+    </head>
+    <body onload="start()">
+
+        <div id="topNav">Sambahsa <img src="resources/img/symbol-kwit.png" alt="kwekwl" id="kwekwl"> Mundialect</div>
+        <div id="topNavExtraSpace"></div>
+
+        <div id="box">
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!------------------------------------------ SECTION: HOME ------------------------------------------>
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+
+            <div class="section" id="sectionHome">
+        
+                <div class="langSpecific enText">
+            
+                    <h1>HOME</h1>
+
+                    <div class="listOfButtons">
+                        <div class="mediumButton" onclick="changeSection('whatis')">What is Sambahsa?</div>
+                        <div class="mediumButton" onclick="changeSection('transcriptor')">Phonetic Transcriptor</div>
+                        <div class="mediumButton" onclick="changeSection('conjugations')">Dictionary of Conjugations</div>
+                    </div>
+            
+                </div>
+            
+                <div class="langSpecific esText">
+        
+                    <h1>INICIO</h1>
+
+                    <div class="listOfButtons">
+                        <div class="mediumButton" onclick="changeSection('whatis')">¿Qué es sambahsa?</div>
+                        <div class="mediumButton" onclick="changeSection('transcriptor')">Transcriptor Fonético</div>
+                        <div class="mediumButton" onclick="changeSection('conjugations')">Diccionario de Conjugaciones</div>
+                    </div>
+            
+                </div>
+            
+                <div class="langSpecific frText">
+        
+                    <h1>ACCUEIL</h1>
+
+                    <div class="listOfButtons">
+                        <div class="mediumButton" onclick="changeSection('whatis')">Qu'est-ce que Sambahsa&nbsp;?</div>
+                        <div class="mediumButton" onclick="changeSection('transcriptor')">Transcripteur Phonétique</div>
+                        <div class="mediumButton" onclick="changeSection('conjugations')">Dictionnaire de Conjugaisons</div>
+                    </div>
+            
+                </div>
+            
+                <div class="langSpecific ruText">
+        
+                    <h1>ГЛАВНАЯ</h1>
+
+                    <div class="listOfButtons">
+                        <div class="mediumButton" onclick="changeSection('whatis')">Что такое Самбахса?</div>
+                        <div class="mediumButton" onclick="changeSection('transcriptor')">Фонетический Транскриптор</div>
+                        <div class="mediumButton" onclick="changeSection('conjugations')">Словарь спряжений</div>
+                    </div>
+            
+                </div>
+            
+                <div class="langSpecific ptbrText">
+            
+                    <h1>INÍCIO</h1>
+
+                    <div class="listOfButtons">
+                        <div class="mediumButton" onclick="changeSection('whatis')">O que é sambahsa?</div>
+                        <div class="mediumButton" onclick="changeSection('transcriptor')">Transcritor Fonético</div>
+                        <div class="mediumButton" onclick="changeSection('conjugations')">Dicionário de conjugações</div>
+                    </div>
+            
+                </div>
+            
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!---------------------------------------- SECTION: GRAMMAR ----------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            
+            <div class="section" id="sectionGrammar">
+            
+                <!-------------------------------------------------------------------------------->
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- English text --------------------------------->
+                <div class="langSpecific enText">
+                    <h1>GRAMMAR</h1>
+
+                    <div class="courseSection courseSectionTableOfContents" style="display: block;">
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionPronunciation')">Pronunciation</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionArticles1')">Articles I</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionAdjectives')">Adjectives</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionPronouns')">Pronouns</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionVerbs1')">Verbs I</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionArticles2')">Articles II</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionDeclensions')">Declensions</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionVerbs2')">Verbs II</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionVerbs3')">Verbs III</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionParticiplesAndGerund')">Participles and Gerund</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionAccompaniedReading1')">Accompanied Reading I</div>
+
+                    </div>
+
+                    <div class="courseSection courseSectionPronunciation">
+                        <h2>Pronunciation</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Go back</div>
+
+                        <br>
+
+                        <p>In this course, we will make intensive use of the IPA <em>(<b>I</b>nternational <b>P</b>honetic <b>A</b>lphabet)</em>,  
+                            that has the function of transcribing the phonetics of the spoken language. Let's see some possible sounds for Sambahsa:</p>
+
+                        <div class="listOfButtons">
+
+                            <div class="soundButton" onclick="playPause('audio_a')">
+                                [a]<audio id="audio_a" src="resources/audio/a.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ae')">
+                                [ɛ]<audio id="audio_ae" src="resources/audio/ae.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_e')">
+                                [e]<audio id="audio_e" src="resources/audio/e.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ee')">
+                                [ə]<audio id="audio_ee" src="resources/audio/ee.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_i')">
+                                [i]<audio id="audio_i" src="resources/audio/i.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_o')">
+                                [o]<audio id="audio_o" src="resources/audio/o.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_oa')">
+                                [ɔ]<audio id="audio_oa" src="resources/audio/oa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_u')">
+                                [u]<audio id="audio_u" src="resources/audio/u.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_y')">
+                                [y]<audio id="audio_y" src="resources/audio/ui.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_oe')">
+                                [ø]<audio id="audio_oe" src="resources/audio/oe.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_wa')">
+                                [wa]<audio id="audio_wa" src="resources/audio/wa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ya')">
+                                [ja]<audio id="audio_ya" src="resources/audio/ya.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ao')">
+                                [aʊ̯]<audio id="audio_ao" src="resources/audio/ao.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ba')">
+                                [ba]<audio id="audio_ba" src="resources/audio/ba.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ka')">
+                                [ka]<audio id="audio_ka" src="resources/audio/ka.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_da')">
+                                [da]<audio id="audio_da" src="resources/audio/da.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_fa')">
+                                [fa]<audio id="audio_fa" src="resources/audio/fa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ga')">
+                                [ga]<audio id="audio_ga" src="resources/audio/ga.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ha')">
+                                [ha]<audio id="audio_ha" src="resources/audio/ha.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ja')">
+                                [ʒa]<audio id="audio_ja" src="resources/audio/ja.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_la')">
+                                [la]<audio id="audio_la" src="resources/audio/la.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ma')">
+                                [ma]<audio id="audio_ma" src="resources/audio/ma.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_na')">
+                                [na]<audio id="audio_na" src="resources/audio/na.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_pa')">
+                                [pa]<audio id="audio_pa" src="resources/audio/pa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_xa')">
+                                [xa]<audio id="audio_xa" src="resources/audio/xa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ca')">
+                                [ʃa]<audio id="audio_ca" src="resources/audio/ca.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_cca')">
+                                [ça]<audio id="audio_cca" src="resources/audio/cca.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_sa')">
+                                [sa]<audio id="audio_sa" src="resources/audio/sa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_tha')">
+                                [θa]<audio id="audio_tha" src="resources/audio/tha.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ta')">
+                                [ta]<audio id="audio_ta" src="resources/audio/ta.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_va')">
+                                [va]<audio id="audio_va" src="resources/audio/va.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_za')">
+                                [za]<audio id="audio_za" src="resources/audio/za.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_tca')">
+                                [t͡ʃa]<audio id="audio_tca" src="resources/audio/tca.ogg" preload="auto"></audio>
+                            </div>
+
+                        </div>
+
+                        <br>
+                        <p>The R consonant can have different sounds, but you are not obliged to use all of them:</p>
+
+                        <div class="listOfButtons">
+                            <div class="soundButton" onclick="playPause('audio_ra2')">
+                                [ʀa]<audio id="audio_ra2" src="resources/audio/ra2.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_rabr')">
+                                [ɾa]<audio id="audio_rabr" src="resources/audio/rabr.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_rra')">
+                                [ra]<audio id="audio_rra" src="resources/audio/rra.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ar')">
+                                [aʁ]<audio id="audio_ar" src="resources/audio/ar.ogg" preload="auto"></audio>
+                            </div>
+                        </div>
+
+                        <br>
+                        <p>Now allow me to comment about some sounds:</p>
+
+                        <ul>
+                            <li></li>
+                        </ul>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionArticles1">
+                        <h2>Articles I</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Go back</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionAdjectives">
+                        <h2>Adjectives</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Go back</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionPronouns">
+                        <h2>Pronouns</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Go back</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionVerbs1">
+                        <h2>Verbs I</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Go back</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionArticles2">
+                        <h2>Articles II</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Go back</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionDeclensions">
+                        <h2>Declensions</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Go back</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionVerbs2">
+                        <h2>Verbs II</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Go back</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionVerbs3">
+                        <h2>Verbs III</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Go back</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionParticiplesAndGerund">
+                        <h2>Participles and Gerund</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Go back</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionAccompaniedReading1">
+                        <h2>Accompanied Reading I</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Go back</div>
+                        
+                    </div>
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- Spanish text --------------------------------->
+                <div class="langSpecific esText">
+                    <h1>GRAMÁTICA</h1>
+
+                    <div class="courseSection courseSectionTableOfContents" style="display: block;">
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionPronunciation')">Pronunciación</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionArticles1')">Artículos I</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionAdjectives')">Adjetivos</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionPronouns')">Pronombres</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionVerbs1')">Verbos I</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionArticles2')">Artículos II</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionDeclensions')">Declinaciones</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionVerbs2')">Verbos II</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionVerbs3')">Verbos III</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionParticiplesAndGerund')">Participios y Gerundio</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionAccompaniedReading1')">Lectura Acompañada I</div>
+
+                    </div>
+
+                    <div class="courseSection courseSectionPronunciation">
+                        <h2>Pronunciación</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Volver</div>
+
+                        <br>
+
+                        <p>En este curso, haremos un uso intensivo del AFI <em>(<b>A</b>lfabeto <b>F</b>onético <b>I</b>nternacional)</em>, 
+                            que tiene la función de transcribir la fonética del lenguaje hablado. Veamos algunos sonidos posibles para el sambahsa:</p>
+
+                        <div class="listOfButtons">
+
+                            <div class="soundButton" onclick="playPause('audio_a')">
+                                [a]<audio id="audio_a" src="resources/audio/a.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ae')">
+                                [ɛ]<audio id="audio_ae" src="resources/audio/ae.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_e')">
+                                [e]<audio id="audio_e" src="resources/audio/e.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ee')">
+                                [ə]<audio id="audio_ee" src="resources/audio/ee.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_i')">
+                                [i]<audio id="audio_i" src="resources/audio/i.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_o')">
+                                [o]<audio id="audio_o" src="resources/audio/o.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_oa')">
+                                [ɔ]<audio id="audio_oa" src="resources/audio/oa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_u')">
+                                [u]<audio id="audio_u" src="resources/audio/u.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_y')">
+                                [y]<audio id="audio_y" src="resources/audio/ui.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_oe')">
+                                [ø]<audio id="audio_oe" src="resources/audio/oe.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_wa')">
+                                [wa]<audio id="audio_wa" src="resources/audio/wa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ya')">
+                                [ja]<audio id="audio_ya" src="resources/audio/ya.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ao')">
+                                [aʊ̯]<audio id="audio_ao" src="resources/audio/ao.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ba')">
+                                [ba]<audio id="audio_ba" src="resources/audio/ba.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ka')">
+                                [ka]<audio id="audio_ka" src="resources/audio/ka.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_da')">
+                                [da]<audio id="audio_da" src="resources/audio/da.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_fa')">
+                                [fa]<audio id="audio_fa" src="resources/audio/fa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ga')">
+                                [ga]<audio id="audio_ga" src="resources/audio/ga.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ha')">
+                                [ha]<audio id="audio_ha" src="resources/audio/ha.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ja')">
+                                [ʒa]<audio id="audio_ja" src="resources/audio/ja.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_la')">
+                                [la]<audio id="audio_la" src="resources/audio/la.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ma')">
+                                [ma]<audio id="audio_ma" src="resources/audio/ma.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_na')">
+                                [na]<audio id="audio_na" src="resources/audio/na.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_pa')">
+                                [pa]<audio id="audio_pa" src="resources/audio/pa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_xa')">
+                                [xa]<audio id="audio_xa" src="resources/audio/xa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ca')">
+                                [ʃa]<audio id="audio_ca" src="resources/audio/ca.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_cca')">
+                                [ça]<audio id="audio_cca" src="resources/audio/cca.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_sa')">
+                                [sa]<audio id="audio_sa" src="resources/audio/sa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_tha')">
+                                [θa]<audio id="audio_tha" src="resources/audio/tha.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ta')">
+                                [ta]<audio id="audio_ta" src="resources/audio/ta.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_va')">
+                                [va]<audio id="audio_va" src="resources/audio/va.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_za')">
+                                [za]<audio id="audio_za" src="resources/audio/za.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_tca')">
+                                [t͡ʃa]<audio id="audio_tca" src="resources/audio/tca.ogg" preload="auto"></audio>
+                            </div>
+
+                        </div>
+
+                        <br>
+                        <p>La consonante R puede tener diferentes sonidos, pero no es obligatorio utilizar todos ellos:</p>
+
+                        <div class="listOfButtons">
+                            <div class="soundButton" onclick="playPause('audio_ra2')">
+                                [ʀa]<audio id="audio_ra2" src="resources/audio/ra2.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_rabr')">
+                                [ɾa]<audio id="audio_rabr" src="resources/audio/rabr.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_rra')">
+                                [ra]<audio id="audio_rra" src="resources/audio/rra.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ar')">
+                                [aʁ]<audio id="audio_ar" src="resources/audio/ar.ogg" preload="auto"></audio>
+                            </div>
+                        </div>
+
+                        <br>
+                        <p>Permítame ahora comentar acerca de algunos sonidos:</p>
+
+                        <ul>
+                            <li></li>
+                        </ul>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionArticles1">
+                        <h2>Artículos I</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Volver</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionAdjectives">
+                        <h2>Adjetivos</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Volver</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionPronouns">
+                        <h2>Pronombres</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Volver</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionVerbs1">
+                        <h2>Verbos I</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Volver</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionArticles2">
+                        <h2>Artículos II</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Volver</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionDeclensions">
+                        <h2>Declinaciones</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Volver</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionVerbs2">
+                        <h2>Verbos II</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Volver</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionVerbs3">
+                        <h2>Verbos III</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Volver</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionParticiplesAndGerund">
+                        <h2>Participios y Gerundio</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Volver</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionAccompaniedReading1">
+                        <h2>Lectura Acompañada I</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Volver</div>
+                        
+                    </div>
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- French text ---------------------------------->
+                <div class="langSpecific frText">
+                    <h1>GRAMMAIRE</h1>
+
+                    <div class="courseSection courseSectionTableOfContents" style="display: block;">
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionPronunciation')">Prononciation</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionArticles1')">Articles I</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionAdjectives')">Adjectifs</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionPronouns')">Pronoms</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionVerbs1')">Verbes I</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionArticles2')">Articles II</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionDeclensions')">Déclinaisons</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionVerbs2')">Verbes II</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionVerbs3')">Verbes III</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionParticiplesAndGerund')">Participes et Gérondif</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionAccompaniedReading1')">Lecture Accompagnée I</div>
+
+                    </div>
+
+                    <div class="courseSection courseSectionPronunciation">
+                        <h2>Prononciation</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Retour</div>
+
+                        <br>
+
+                        <p>Dans ce cours, nous ferons un usage intensif de l'API <em>(<b>A</b>lphabet <b>P</b>honétique <b>I</b>nternational)</em>, 
+                            qui a pour fonction de transcrire la phonétique de la langue parlée. Voyons quelques sons possibles pour le Sambahsa&nbsp;:</p>
+
+                        <div class="listOfButtons">
+
+                            <div class="soundButton" onclick="playPause('audio_a')">
+                                [a]<audio id="audio_a" src="resources/audio/a.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ae')">
+                                [ɛ]<audio id="audio_ae" src="resources/audio/ae.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_e')">
+                                [e]<audio id="audio_e" src="resources/audio/e.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ee')">
+                                [ə]<audio id="audio_ee" src="resources/audio/ee.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_i')">
+                                [i]<audio id="audio_i" src="resources/audio/i.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_o')">
+                                [o]<audio id="audio_o" src="resources/audio/o.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_oa')">
+                                [ɔ]<audio id="audio_oa" src="resources/audio/oa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_u')">
+                                [u]<audio id="audio_u" src="resources/audio/u.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_y')">
+                                [y]<audio id="audio_y" src="resources/audio/ui.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_oe')">
+                                [ø]<audio id="audio_oe" src="resources/audio/oe.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_wa')">
+                                [wa]<audio id="audio_wa" src="resources/audio/wa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ya')">
+                                [ja]<audio id="audio_ya" src="resources/audio/ya.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ao')">
+                                [aʊ̯]<audio id="audio_ao" src="resources/audio/ao.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ba')">
+                                [ba]<audio id="audio_ba" src="resources/audio/ba.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ka')">
+                                [ka]<audio id="audio_ka" src="resources/audio/ka.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_da')">
+                                [da]<audio id="audio_da" src="resources/audio/da.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_fa')">
+                                [fa]<audio id="audio_fa" src="resources/audio/fa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ga')">
+                                [ga]<audio id="audio_ga" src="resources/audio/ga.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ha')">
+                                [ha]<audio id="audio_ha" src="resources/audio/ha.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ja')">
+                                [ʒa]<audio id="audio_ja" src="resources/audio/ja.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_la')">
+                                [la]<audio id="audio_la" src="resources/audio/la.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ma')">
+                                [ma]<audio id="audio_ma" src="resources/audio/ma.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_na')">
+                                [na]<audio id="audio_na" src="resources/audio/na.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_pa')">
+                                [pa]<audio id="audio_pa" src="resources/audio/pa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_xa')">
+                                [xa]<audio id="audio_xa" src="resources/audio/xa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ca')">
+                                [ʃa]<audio id="audio_ca" src="resources/audio/ca.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_cca')">
+                                [ça]<audio id="audio_cca" src="resources/audio/cca.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_sa')">
+                                [sa]<audio id="audio_sa" src="resources/audio/sa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_tha')">
+                                [θa]<audio id="audio_tha" src="resources/audio/tha.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ta')">
+                                [ta]<audio id="audio_ta" src="resources/audio/ta.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_va')">
+                                [va]<audio id="audio_va" src="resources/audio/va.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_za')">
+                                [za]<audio id="audio_za" src="resources/audio/za.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_tca')">
+                                [t͡ʃa]<audio id="audio_tca" src="resources/audio/tca.ogg" preload="auto"></audio>
+                            </div>
+
+                        </div>
+
+                        <br>
+                        <p>La consonne R peut avoir différents sons, mais vous n'êtes pas obligé de les utiliser tous&nbsp;:</p>
+
+                        <div class="listOfButtons">
+                            <div class="soundButton" onclick="playPause('audio_ra2')">
+                                [ʀa]<audio id="audio_ra2" src="resources/audio/ra2.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_rabr')">
+                                [ɾa]<audio id="audio_rabr" src="resources/audio/rabr.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_rra')">
+                                [ra]<audio id="audio_rra" src="resources/audio/rra.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ar')">
+                                [aʁ]<audio id="audio_ar" src="resources/audio/ar.ogg" preload="auto"></audio>
+                            </div>
+                        </div>
+
+                        <br>
+                        <p>Maintenant, permettez-moi de commenter quelques sons&nbsp;:</p>
+
+                        <ul>
+                            <li></li>
+                        </ul>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionArticles1">
+                        <h2>Articles I</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Retour</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionAdjectives">
+                        <h2>Adjectifs</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Retour</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionPronouns">
+                        <h2>Pronoms</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Retour</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionVerbs1">
+                        <h2>Verbes I</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Retour</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionArticles2">
+                        <h2>Articles II</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Retour</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionDeclensions">
+                        <h2>Déclinaisons</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Retour</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionVerbs2">
+                        <h2>Verbes II</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Retour</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionVerbs3">
+                        <h2>Verbes III</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Retour</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionParticiplesAndGerund">
+                        <h2>Participes et Gérondif</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Retour</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionAccompaniedReading1">
+                        <h2>Lecture Accompagnée I</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Retour</div>
+                        
+                    </div>
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- Russian text --------------------------------->
+                <div class="langSpecific ruText">
+                    <h1>ГРАММАТИКА</h1>
+
+                    <div class="courseSection courseSectionTableOfContents" style="display: block;">
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionPronunciation')">Произношение</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionArticles1')">Артикли I</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionAdjectives')">Прилагательные</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionPronouns')">Местоимения</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionVerbs1')">Глаголы I</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionArticles2')">Артикли II</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionDeclensions')">Склонения</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionVerbs2')">Глаголы II</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionVerbs3')">Глаголы III</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionParticiplesAndGerund')">Причастия и Герундий</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionAccompaniedReading1')">Сопровождаемое Чтение I</div>
+
+                    </div>
+
+                    <div class="courseSection courseSectionPronunciation">
+                        <h2>Произношение</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Назад</div>
+
+                        <br>
+
+                        <p>В этом курсе мы будем интенсивно использовать МФА <em>(<b>М</b>еждународный <b>Ф</b>онетический <b>А</b>лфавит)</em>, 
+                            который служит для транскрипции фонетики устной речи. Давайте рассмотрим некоторые возможные звуки для Самбахсы:</p>
+
+                        <div class="listOfButtons">
+
+                            <div class="soundButton" onclick="playPause('audio_a')">
+                                [a]<audio id="audio_a" src="resources/audio/a.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ae')">
+                                [ɛ]<audio id="audio_ae" src="resources/audio/ae.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_e')">
+                                [e]<audio id="audio_e" src="resources/audio/e.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ee')">
+                                [ə]<audio id="audio_ee" src="resources/audio/ee.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_i')">
+                                [i]<audio id="audio_i" src="resources/audio/i.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_o')">
+                                [o]<audio id="audio_o" src="resources/audio/o.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_oa')">
+                                [ɔ]<audio id="audio_oa" src="resources/audio/oa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_u')">
+                                [u]<audio id="audio_u" src="resources/audio/u.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_y')">
+                                [y]<audio id="audio_y" src="resources/audio/ui.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_oe')">
+                                [ø]<audio id="audio_oe" src="resources/audio/oe.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_wa')">
+                                [wa]<audio id="audio_wa" src="resources/audio/wa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ya')">
+                                [ja]<audio id="audio_ya" src="resources/audio/ya.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ao')">
+                                [aʊ̯]<audio id="audio_ao" src="resources/audio/ao.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ba')">
+                                [ba]<audio id="audio_ba" src="resources/audio/ba.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ka')">
+                                [ka]<audio id="audio_ka" src="resources/audio/ka.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_da')">
+                                [da]<audio id="audio_da" src="resources/audio/da.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_fa')">
+                                [fa]<audio id="audio_fa" src="resources/audio/fa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ga')">
+                                [ga]<audio id="audio_ga" src="resources/audio/ga.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ha')">
+                                [ha]<audio id="audio_ha" src="resources/audio/ha.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ja')">
+                                [ʒa]<audio id="audio_ja" src="resources/audio/ja.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_la')">
+                                [la]<audio id="audio_la" src="resources/audio/la.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ma')">
+                                [ma]<audio id="audio_ma" src="resources/audio/ma.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_na')">
+                                [na]<audio id="audio_na" src="resources/audio/na.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_pa')">
+                                [pa]<audio id="audio_pa" src="resources/audio/pa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_xa')">
+                                [xa]<audio id="audio_xa" src="resources/audio/xa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ca')">
+                                [ʃa]<audio id="audio_ca" src="resources/audio/ca.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_cca')">
+                                [ça]<audio id="audio_cca" src="resources/audio/cca.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_sa')">
+                                [sa]<audio id="audio_sa" src="resources/audio/sa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_tha')">
+                                [θa]<audio id="audio_tha" src="resources/audio/tha.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ta')">
+                                [ta]<audio id="audio_ta" src="resources/audio/ta.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_va')">
+                                [va]<audio id="audio_va" src="resources/audio/va.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_za')">
+                                [za]<audio id="audio_za" src="resources/audio/za.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_tca')">
+                                [t͡ʃa]<audio id="audio_tca" src="resources/audio/tca.ogg" preload="auto"></audio>
+                            </div>
+
+                        </div>
+
+                        <br>
+                        <p>Согласная R может иметь разные звуки, но вы не обязаны использовать их все:</p>
+
+                        <div class="listOfButtons">
+                            <div class="soundButton" onclick="playPause('audio_ra2')">
+                                [ʀa]<audio id="audio_ra2" src="resources/audio/ra2.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_rabr')">
+                                [ɾa]<audio id="audio_rabr" src="resources/audio/rabr.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_rra')">
+                                [ra]<audio id="audio_rra" src="resources/audio/rra.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ar')">
+                                [aʁ]<audio id="audio_ar" src="resources/audio/ar.ogg" preload="auto"></audio>
+                            </div>
+                        </div>
+
+                        <br>
+                        <p>Теперь позвольте мне прокомментировать некоторые звуки:</p>
+
+                        <ul>
+                            <li></li>
+                        </ul>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionArticles1">
+                        <h2>Артикли I</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Назад</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionAdjectives">
+                        <h2>Прилагательные</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Назад</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionPronouns">
+                        <h2>Местоимения</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Назад</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionVerbs1">
+                        <h2>Глаголы I</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Назад</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionArticles2">
+                        <h2>Артикли II</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Назад</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionDeclensions">
+                        <h2>Склонения</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Назад</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionVerbs2">
+                        <h2>Глаголы II</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Назад</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionVerbs3">
+                        <h2>Глаголы III</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Назад</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionParticiplesAndGerund">
+                        <h2>Причастия и Герундий</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Назад</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionAccompaniedReading1">
+                        <h2>Сопровождаемое Чтение I</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Назад</div>
+                        
+                    </div>
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!-------------------------------------------------------------------------------->
+                <!-------------------------- Brazilian Portuguese text --------------------------->
+                <div class="langSpecific ptbrText">
+                    <h1>GRAMÁTICA</h1>
+
+                    <div class="courseSection courseSectionTableOfContents" style="display: block;">
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionPronunciation')">Pronúncia</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionArticles1')">Artigos I</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionAdjectives')">Adjetivos</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionPronouns')">Pronomes</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionVerbs1')">Verbos I</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionArticles2')">Artigos II</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionDeclensions')">Declinações</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionVerbs2')">Verbos II</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionVerbs3')">Verbos III</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionParticiplesAndGerund')">Particípios e Gerúndio</div>
+
+                        <div class="courseChapter" onclick="changeChapter ('courseSectionAccompaniedReading1')">Leitura Acompanhada I</div>
+
+                    </div>
+
+                    <div class="courseSection courseSectionPronunciation">
+                        <h2>Pronúncia</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Voltar</div>
+
+                        <br>
+
+                        <p>Neste curso faremos uso intensivo do AFI <em>(<b>A</b>lfabeto <b>F</b>onético <b>I</b>nternacional)</em>, que tem a função de 
+                        transcrever a fonética da língua falada. Vejamos os possíveis sons do sambahsa:</p>
+
+                        <div class="listOfButtons">
+
+                            <div class="soundButton" onclick="playPause('audio_a')">
+                                [a]<audio id="audio_a" src="resources/audio/a.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ae')">
+                                [ɛ]<audio id="audio_ae" src="resources/audio/ae.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_e')">
+                                [e]<audio id="audio_e" src="resources/audio/e.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ee')">
+                                [ə]<audio id="audio_ee" src="resources/audio/ee.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_i')">
+                                [i]<audio id="audio_i" src="resources/audio/i.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_o')">
+                                [o]<audio id="audio_o" src="resources/audio/o.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_oa')">
+                                [ɔ]<audio id="audio_oa" src="resources/audio/oa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_u')">
+                                [u]<audio id="audio_u" src="resources/audio/u.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_y')">
+                                [y]<audio id="audio_y" src="resources/audio/ui.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_oe')">
+                                [ø]<audio id="audio_oe" src="resources/audio/oe.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_wa')">
+                                [wa]<audio id="audio_wa" src="resources/audio/wa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ya')">
+                                [ja]<audio id="audio_ya" src="resources/audio/ya.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ao')">
+                                [aʊ̯]<audio id="audio_ao" src="resources/audio/ao.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ba')">
+                                [ba]<audio id="audio_ba" src="resources/audio/ba.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ka')">
+                                [ka]<audio id="audio_ka" src="resources/audio/ka.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_da')">
+                                [da]<audio id="audio_da" src="resources/audio/da.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_fa')">
+                                [fa]<audio id="audio_fa" src="resources/audio/fa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ga')">
+                                [ga]<audio id="audio_ga" src="resources/audio/ga.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ha')">
+                                [ha]<audio id="audio_ha" src="resources/audio/ha.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ja')">
+                                [ʒa]<audio id="audio_ja" src="resources/audio/ja.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_la')">
+                                [la]<audio id="audio_la" src="resources/audio/la.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ma')">
+                                [ma]<audio id="audio_ma" src="resources/audio/ma.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_na')">
+                                [na]<audio id="audio_na" src="resources/audio/na.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_pa')">
+                                [pa]<audio id="audio_pa" src="resources/audio/pa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_xa')">
+                                [xa]<audio id="audio_xa" src="resources/audio/xa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ca')">
+                                [ʃa]<audio id="audio_ca" src="resources/audio/ca.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_cca')">
+                                [ça]<audio id="audio_cca" src="resources/audio/cca.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_sa')">
+                                [sa]<audio id="audio_sa" src="resources/audio/sa.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_tha')">
+                                [θa]<audio id="audio_tha" src="resources/audio/tha.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ta')">
+                                [ta]<audio id="audio_ta" src="resources/audio/ta.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_va')">
+                                [va]<audio id="audio_va" src="resources/audio/va.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_za')">
+                                [za]<audio id="audio_za" src="resources/audio/za.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_tca')">
+                                [t͡ʃa]<audio id="audio_tca" src="resources/audio/tca.ogg" preload="auto"></audio>
+                            </div>
+
+                        </div>
+
+                        <br>
+                        <p>Escolha um dos sons R abaixo:</p>
+
+                        <div class="listOfButtons">
+                            <div class="soundButton" onclick="playPause('audio_ra2')">
+                                [ʀa]<audio id="audio_ra2" src="resources/audio/ra2.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_rabr')">
+                                [ɾa]<audio id="audio_rabr" src="resources/audio/rabr.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_rra')">
+                                [ra]<audio id="audio_rra" src="resources/audio/rra.ogg" preload="auto"></audio>
+                            </div>
+
+                            <div class="soundButton" onclick="playPause('audio_ar')">
+                                [aʁ]<audio id="audio_ar" src="resources/audio/ar.ogg" preload="auto"></audio>
+                            </div>
+                        </div>
+
+                        <br>
+                        <p>Agora permita-me fazer alguns comentários sobre determinados sons:</p>
+
+                        <ul>
+                            <li></li>
+                        </ul>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionArticles1">
+                        <h2>Artigos I</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Voltar</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionAdjectives">
+                        <h2>Adjetivos</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Voltar</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionPronouns">
+                        <h2>Pronomes</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Voltar</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionVerbs1">
+                        <h2>Verbos I</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Voltar</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionArticles2">
+                        <h2>Artigos II</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Voltar</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionDeclensions">
+                        <h2>Declinações</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Voltar</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionVerbs2">
+                        <h2>Verbos II</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Voltar</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionVerbs3">
+                        <h2>Verbos III</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Voltar</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionParticiplesAndGerund">
+                        <h2>Particípios e Gerúndio</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Voltar</div>
+                        
+                    </div>
+
+                    <div class="courseSection courseSectionAccompaniedReading1">
+                        <h2>Leitura Acompanhada I</h2>
+                        <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">Voltar</div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!-------------------------------------- SECTION: DICTIONARY ---------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            
+            <div class="section" id="sectionDictionary">
+            
+                <div class="langSpecific enText">
+                    <h1>English-Sambahsa Dictionary</h1>
+                    <br><br>
+                    <input type="text" class="inputTextArea" id="en_inputTextArea" />
+                    <input type="button" id="en_buttonDictionar" value="»»" onclick="startSbSearch ('listOfWordsEnglish', 'en_inputTextArea', 'en_result', 99);" />
+                    <br><br>
+                    <div id="en_result"></div>
+                </div>
+            
+                <div class="langSpecific esText">
+                    <h1>Diccionario Español-Sambahsa</h1>
+                    <br><br>
+                    <input type="text" class="inputTextArea" id="es_inputTextArea" />
+                    <input type="button" id="es_buttonDictionar" value="»»" onclick="startSbSearch ('listOfWordsSpanish', 'es_inputTextArea', 'es_result', 2);" />
+                    <br><br>
+                    <div id="es_result"></div>
+                </div>
+            
+                <div class="langSpecific frText">
+                    <h1>Dictionnaire Français-Sambahsa</h1>
+                    <br><br>
+                    <input type="text" class="inputTextArea" id="fr_inputTextArea" />
+                    <input type="button" id="fr_buttonDictionar" value="»»" onclick="startSbSearch ('listOfWordsFrench', 'fr_inputTextArea', 'fr_result', 3);" />
+                    <br><br>
+                    <div id="fr_result"></div>
+                </div>
+            
+                <div class="langSpecific ptbrText">
+                    <h1>Dicionário Português-Sambahsa</h1>
+                    <br><br>
+                    <input type="text" class="inputTextArea" id="pt_inputTextArea" />
+                    <input type="button" id="pt_buttonDictionar" value="»»" onclick="startSbSearch ('listOfWordsPortuguese', 'pt_inputTextArea', 'pt_result', 1);" />
+                    <br><br>
+                    <div id="pt_result"></div>
+                </div>
+        
+                <div class="langSpecific ruText">
+                    <h1>Самбаса-русский словарь</h1>
+                    <br><br>
+                    <input type="text" class="inputTextArea" id="ru_inputTextArea" />
+                    <input type="button" id="ru_buttonDictionar" value="»»" onclick="startSbSearch ('listOfWordsRussian', 'ru_inputTextArea', 'ru_result', 5);" />
+                    <br><br>
+                    <div id="ru_result"></div>
+                </div>
+                
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------- SECTION: SETTINGS ----------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+        
+            <div class="section" id="sectionSettings">
+        
+                <div class="langSpecific enText">
+                    <h1>SETTINGS</h1>
+                    <h2>Change language</h2>
+                </div>
+            
+                <div class="langSpecific esText">
+                    <h1>CONFIGURACIONES</h1>
+                    <h2>Cambiar idioma</h2>
+                </div>
+            
+                <div class="langSpecific frText">
+                    <h1>PARAMÈTRES</h1>
+                    <h2>Changer la langue</h2>
+                </div>
+            
+                <div class="langSpecific ruText">
+                    <h1>НАСТРОЙКИ</h1>
+                    <h2>Изменить язык</h2>
+                </div>
+            
+                <div class="langSpecific ptbrText">
+                    <h1>CONFIGURAÇÕES</h1>
+                    <h2>Mudar idioma</h2>
+                </div>
+        
+                <br>
+        
+                <div class="listOfButtons">
+                    <div class="smallButton" onclick="changeLanguage ('en')">English</div>
+                    <div class="smallButton" onclick="changeLanguage ('es')">Español</div>
+                    <div class="smallButton" onclick="changeLanguage ('fr')">Français</div>
+                    <div class="smallButton" onclick="changeLanguage ('ptbr')">Português</div>
+                    <div class="smallButton" onclick="changeLanguage ('ru')">Русский</div>
+                </div>
+        
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------- SECTION: WHAT IS ------------------------------------------>
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+
+            <div class="section" id="whatis">
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- English text --------------------------------->
+                <div class="langSpecific enText">
+
+                    <h1>What is Sambahsa?</h1>
+
+                    <p><strong>Sambahsa-Mundialect</strong> is an auxiliary language created by the French Dr. Olivier 
+                        Simon that had been released on the Internet in 2007. An auxiliary language has 
+                        the role of allowing the communication between different people whose mother 
+                        tongues are different, something that English makes possible nowadays, 
+                        however an auxiliary language has the differential of being easier to learn; 
+                        while it took years for a non-native to master English, it took only a matter 
+                        of months to master an auxiliary language.</p>
+
+
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- Spanish text --------------------------------->
+                <div class="langSpecific esText">
+
+                    <h1>¿Qué es sambahsa?</h1>
+
+                    <p><strong>Sambahsa-Mundialect</strong> es una lengua auxiliar creada por el Dr. Olivier Simon, 
+                        un francés, que se publicó en Internet en 2007. Una lengua auxiliar tiene la 
+                        función de permitir la comunicación entre personas cuyas lenguas maternas son 
+                        diferentes, algo que el inglés hace posible en la actualidad. Sin embargo, una 
+                        lengua auxiliar tiene la ventaja de ser más fácil de aprender. Mientras que 
+                        llevaría años a un no nativo dominar el inglés, solo se necesitaría cuestión 
+                        de meses para dominar una lengua auxiliar.</p>
+
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- French text ---------------------------------->
+                <div class="langSpecific frText">
+
+                    <h1>Qu'est-ce que Sambahsa&nbsp;?</h1>
+
+                    <p><strong>Sambahsa-Mundialect</strong> est une langue auxiliaire créée par le Dr. Olivier Simon, 
+                        un Français, qui a été mise en ligne sur Internet en 2007. Une langue auxiliaire 
+                        a pour rôle de permettre la communication entre des personnes dont les 
+                        langues maternelles sont différentes, ce que l'anglais permet de nos jours. 
+                        Cependant, une langue auxiliaire a l'avantage d'être plus facile à apprendre. 
+                        Alors qu'il faut des années à un non-natif pour maîtriser l'anglais, il ne faut 
+                        que quelques mois pour maîtriser une langue auxiliaire.</p>
+
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- Russian text --------------------------------->
+                <div class="langSpecific ruText">
+
+                    <h1>Что такое Самбахса?</h1>
+
+                    <p><strong>Самбаса-Мундиалект</strong> - это вспомогательный язык, созданный французским доктором 
+                        Оливье Симоном и выпущенный в Интернете в 2007 году. Вспомогательный язык 
+                        выполняет функцию обеспечения коммуникации между людьми, у которых разные 
+                        родные языки, что в настоящее время делает возможным английский. Однако 
+                        вспомогательный язык имеет преимущество в том, что его легче изучать; в то 
+                        время как для не-родного диктора потребовалось бы годы, чтобы овладеть 
+                        английским, для овладения вспомогательным языком потребовалось бы всего 
+                        несколько месяцев.</p>
+
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!-------------------------- Brazilian Portuguese text --------------------------->
+                <div class="langSpecific ptbrText">
+
+                    <h1>O que é sambahsa?</h1>
+
+                    <p><strong>Sambahsa-Mundialect</strong> é uma língua auxiliar criada pelo francês Dr. Olivier Simon 
+                        que fora lançada na internet em 2007. Uma língua auxiliar tem a função de permitir 
+                        a comunicação entre diferentes pessoas cujas línguas maternas são diferentes, algo 
+                        que o inglês permite hoje em dia, entretanto uma língua auxiliar tem o diferencial 
+                        de ser muito mas fácil de aprender; enquanto você levaria anos para dominar a 
+                        língua inglesa, você pode aprender uma língua auxiliar em questão de meses.</p>
+
+                </div>
+                
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!------------------------------------ SECTION: TRANSCRIPTOR ---------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+
+            <div class="section" id="transcriptor">
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- English text --------------------------------->
+                <div class="langSpecific enText">
+                    <h1>Phonetic Transcriptor</h1>
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- Spanish text --------------------------------->
+                <div class="langSpecific esText">
+                    <h1>Transcriptor Fonético</h1>
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- French text ---------------------------------->
+                <div class="langSpecific frText">
+                    <h1>Transcripteur Phonétique</h1>
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- Russian text --------------------------------->
+                <div class="langSpecific ruText">
+                    <h1>Фонетический Транскриптор</h1>
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!-------------------------- Brazilian Portuguese text --------------------------->
+                <div class="langSpecific ptbrText">
+                    <h1>Transcritor Fonético</h1>
+                </div>
+                
+
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'ipa_tab')">AFI</button>
+                    <button class="tablinks" onclick="openTab(event, 'spt_tab')">SPT</button>
+                </div>
+
+                <div id="ipa_tab" class="tabcontent" style="display: block;">
+                    <textarea class="transcriptorInputTextArea" id="transcriptorInputTextArea2"></textarea>
+                        <br>
+                        <button type="button" onclick="getWords ('transcriptorInputTextArea2', 'spt_outputTextArea', 'ipa_outputTextArea', 1);" style="margin-right: 20px; display: inline;"><strong>»»</strong></button>
+                        <div style="height: 10px;"></div>
+                        <div id="ipa_outputTextArea"></div>
+                </div>
+                
+                <div id="spt_tab" class="tabcontent">
+                <textarea class="transcriptorInputTextArea" id="transcriptorInputTextArea1"></textarea>
+                    <br>
+                    <button type="button" onclick="getWords ('transcriptorInputTextArea1', 'spt_outputTextArea', 'ipa_outputTextArea', 0);" style="margin-right: 20px; display: inline;"><strong>»»</strong></button>
+                    <div style="height: 10px;"></div>
+                    <div id="spt_outputTextArea"></div>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!------------------------------------ SECTION: CONJUGATIONS ---------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+
+            <div class="section" id="conjugations">
+
+                <div class="langSpecific enText">
+                    <h1>Dictionary of Verb Conjugations</h1>
+                </div>
+            
+                <div class="langSpecific esText">
+                    <h1>Diccionario de Conjugaciones de Verbos</h1>
+                </div>
+            
+                <div class="langSpecific frText">
+                    <h1>Dictionnaire des Conjugaisons de Verbes</h1>
+                </div>
+            
+                <div class="langSpecific ptbrText">
+                    <h1>Dicionário de Conjugações de Verbos</h1>
+                </div>
+        
+                <div class="langSpecific ruText">
+                    <h1>Словарь спряжений глаголов</h1>
+                </div>
+
+                <br><br>
+                <input type="text" class="inputTextArea" id="cjg_inputTextArea" />
+                <input type="button" id="en_buttonDictionar" value="»»" onclick="startSbSearch ('listOfConjugations', 'cjg_inputTextArea', 'cjg_result', 0);" />
+                <br><br>
+                <div id="cjg_result"></div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!--------------------------------------------------------------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------->
+        <!----------------------------------------- SECTION: MENU ------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------->
+
+        <div id="topNavExtraSpace"></div>
+        <nav>
+            <div class="menuItem" id="menuButtonHome" onclick="changeSection ('sectionHome')">Home</div>
+            <div class="menuItem" id="menuButtonGrammar" onclick="changeSection ('sectionGrammar')">Grammar</div>
+            <div class="menuItem" id="menuButtonDictionary" onclick="changeSection ('sectionDictionary')">Dictionary</div>
+            <div class="menuItem" id="menuButtonSettings" onclick="changeSection ('sectionSettings')">Settings</div>
+        </nav>
+
+        <div class="listOfWords" id="listOfWordsEnglish"></div>
+        <div class="listOfWords" id="listOfWordsSpanish"></div>
+        <div class="listOfWords" id="listOfWordsFrench"></div>
+        <div class="listOfWords" id="listOfWordsPortuguese"></div>
+        <div class="listOfWords" id="listOfWordsRussian"></div>
+        <div class="listOfWords" id="listOfConjugations"></div>
+
+        <script>
+
+            window.addEventListener("keypress", (event) => {
+                if (event.keyCode == 13) {
+
+                    let currentSection = document.getElementsByTagName('html')[0].getAttribute("currentSection");
+                    let lang = document.getElementsByTagName('html')[0].getAttribute("lang");
+
+                    let ipa_tab = document.getElementById("ipa_tab");
+                    let spt_tab = document.getElementById("spt_tab");
+
+                    if (currentSection == "sectionDictionary") {
+                        if (lang == "es") {
+                            startSbSearch ('listOfWordsSpanish', 'es_inputTextArea', 'es_result', 2);
+                        }
+                        else if (lang == "fr") {
+                            startSbSearch ('listOfWordsFrench', 'fr_inputTextArea', 'fr_result', 3);
+                        }
+                        else if (lang == "pt-BR" || lang == "pt") {
+                            startSbSearch ('listOfWordsPortuguese', 'pt_inputTextArea', 'pt_result', 1);
+                        }
+                        else if (lang == "ru") {
+                            startSbSearch ('listOfWordsRussian', 'ru_inputTextArea', 'ru_result', 5);
+                        }
+                        else {
+                            startSbSearch ('listOfWordsEnglish', 'en_inputTextArea', 'en_result', 99);
+                        }
+                    }
+                    else if (currentSection == "conjugations") {
+                        startSbSearch ('listOfConjugations', 'cjg_inputTextArea', 'cjg_result', 0);
+                    }
+                    else if (currentSection == "transcriptor") {
+                        if (spt_tab.style.display == "block") {
+                            getWords ('transcriptorInputTextArea1', 'spt_outputTextArea', 'ipa_outputTextArea', 0);
+                        }
+                        else {
+                            getWords ('transcriptorInputTextArea2', 'spt_outputTextArea', 'ipa_outputTextArea', 1);
+                        }
+                    }
+                }
+            })
+        </script>
+        
+    </body>
+</html>
