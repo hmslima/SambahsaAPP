@@ -619,6 +619,10 @@
                         </ul>
 
                     </div>
+
+                    <div class="courseChapter courseChapterComeBack courseChapterNextOne" onclick="changeChapter ('courseSectionArticles1')">
+                        <img class="icon" src="resources/img/icons/right-arrow.svg">
+                    </div>
                 </div>
 
                 <div class="courseSection courseSectionArticles1">
@@ -635,6 +639,9 @@
                         <span class="langSpecific ruText">Артикли н°1</span>
                     </h2>
                     <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">
+                        <img class="icon" src="resources/img/icons/up-arrow.svg">
+                    </div>
+                    <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionPronunciation')">
                         <img class="icon" src="resources/img/icons/left-arrow.svg">
                     </div>
                     
@@ -654,6 +661,9 @@
                         <span class="langSpecific ruText">Прилагательные</span>
                     </h2>
                     <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">
+                        <img class="icon" src="resources/img/icons/up-arrow.svg">
+                    </div>
+                    <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionArticles1')">
                         <img class="icon" src="resources/img/icons/left-arrow.svg">
                     </div>
                     
@@ -673,6 +683,9 @@
                         <span class="langSpecific ruText">Местоимения</span>
                     </h2>
                     <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">
+                        <img class="icon" src="resources/img/icons/up-arrow.svg">
+                    </div>
+                    <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionAdjectives')">
                         <img class="icon" src="resources/img/icons/left-arrow.svg">
                     </div>
                     
@@ -692,6 +705,9 @@
                         <span class="langSpecific ruText">Глаголы н°1</span>
                     </h2>
                     <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">
+                        <img class="icon" src="resources/img/icons/up-arrow.svg">
+                    </div>
+                    <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionPronouns')">
                         <img class="icon" src="resources/img/icons/left-arrow.svg">
                     </div>
                     
@@ -826,45 +842,105 @@
             
                 <div class="langSpecific enText">
                     <h1>English-Sambahsa Dictionary</h1>
-                    <br><br>
+                    <br>
                     <input type="text" class="inputTextArea" id="en_inputTextArea" />
-                    <input type="button" id="en_buttonDictionar" value="»»" onclick="startSbSearch ('listOfWordsEnglish', 'en_inputTextArea', 'en_result', 99);" />
+                    <input type="button" id="en_buttonDictionar" value="Search" class="commonButton"
+                    onclick="startSbSearch ('listOfWordsEnglish', 'en_inputTextArea', 'en_result', 99);" /><br><br>
+                    Change language:<br>
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('es')" value="Es-Sb" 
+                    title="Spanish-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('fr')" value="Fr-Sb" 
+                    title="French-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('ptbr')" value="Pt-Sb" 
+                    title="Portuguese-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('ru')" value="Ru-Sb" 
+                    title="Russian-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeSection('conjugations')" value="Cjg" 
+                    title="Conjugations" />
                     <br><br>
                     <div id="en_result"></div>
                 </div>
             
                 <div class="langSpecific esText">
                     <h1>Diccionario Español-Sambahsa</h1>
-                    <br><br>
+                    <br>
                     <input type="text" class="inputTextArea" id="es_inputTextArea" />
-                    <input type="button" id="es_buttonDictionar" value="»»" onclick="startSbSearch ('listOfWordsSpanish', 'es_inputTextArea', 'es_result', 2);" />
+                    <input type="button" id="es_buttonDictionar" value="Buscar" class="commonButton"
+                    onclick="startSbSearch ('listOfWordsSpanish', 'es_inputTextArea', 'es_result', 2);" /><br><br>
+                    Cambiar idioma:<br>
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('en')" value="In-Sb" 
+                    title="Inglés-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('fr')" value="Fr-Sb" 
+                    title="Francés-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('ptbr')" value="Pt-Sb" 
+                    title="Portugués-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('ru')" value="Ru-Sb" 
+                    title="Ruso-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeSection('conjugations')" value="Cjg" 
+                    title="Conjugaciones" />
                     <br><br>
                     <div id="es_result"></div>
                 </div>
             
                 <div class="langSpecific frText">
                     <h1>Dictionnaire Français-Sambahsa</h1>
-                    <br><br>
+                    <br>
                     <input type="text" class="inputTextArea" id="fr_inputTextArea" />
-                    <input type="button" id="fr_buttonDictionar" value="»»" onclick="startSbSearch ('listOfWordsFrench', 'fr_inputTextArea', 'fr_result', 3);" />
+                    <input type="button" id="fr_buttonDictionar" value="Rechercher" class="commonButton"
+                    onclick="startSbSearch ('listOfWordsFrench', 'fr_inputTextArea', 'fr_result', 3);" /><br><br>
+                    Changer la langue&nbsp;:<br>
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('en')" value="An-Sb" 
+                    title="Anglais-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('es')" value="Es-Sb" 
+                    title="Espagnol-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('ptbr')" value="Pt-Sb" 
+                    title="Portugais-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('ru')" value="Ru-Sb" 
+                    title="Russe-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeSection('conjugations')" value="Cjg" 
+                    title="Conjugaisons" />
                     <br><br>
                     <div id="fr_result"></div>
                 </div>
             
                 <div class="langSpecific ptbrText">
                     <h1>Dicionário Português-Sambahsa</h1>
-                    <br><br>
+                    <br>
                     <input type="text" class="inputTextArea" id="pt_inputTextArea" />
-                    <input type="button" id="pt_buttonDictionar" value="»»" onclick="startSbSearch ('listOfWordsPortuguese', 'pt_inputTextArea', 'pt_result', 1);" />
+                    <input type="button" id="pt_buttonDictionar" value="Pesquisar" class="commonButton"
+                    onclick="startSbSearch ('listOfWordsPortuguese', 'pt_inputTextArea', 'pt_result', 1);" /><br><br>
+                    Mudar idioma:<br>
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('en')" value="En-Sb" 
+                    title="Inglês-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('es')" value="Es-Sb" 
+                    title="Espanhol-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('fr')" value="Fr-Sb" 
+                    title="Francês-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('ru')" value="Ru-Sb" 
+                    title="Russo-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeSection('conjugations')" value="Cjg" 
+                    title="Conjugações" />
                     <br><br>
                     <div id="pt_result"></div>
                 </div>
         
                 <div class="langSpecific ruText">
                     <h1>Самбаса-русский словарь</h1>
-                    <br><br>
+                    <br>
                     <input type="text" class="inputTextArea" id="ru_inputTextArea" />
-                    <input type="button" id="ru_buttonDictionar" value="»»" onclick="startSbSearch ('listOfWordsRussian', 'ru_inputTextArea', 'ru_result', 5);" />
+                    <input type="button" id="ru_buttonDictionar" value="Поиск" class="commonButton"
+                    onclick="startSbSearch ('listOfWordsRussian', 'ru_inputTextArea', 'ru_result', 5);" /><br><br>
+                    Изменить язык:<br>
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('en')" value="Англ-Самб" 
+                    title="Английский-Самбаса" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('es')" value="Исп-Самб" 
+                    title="Испанский-Самбаса" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('fr')" value="Фр-Самб" 
+                    title="Французский-Самбаса" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('ptbr')" value="Порт-Самб" 
+                    title="Португальский-Самбаса" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeSection('conjugations')" value="Скл" 
+                    title="Склонения глаголов" />
                     <br><br>
                     <div id="ru_result"></div>
                 </div>
@@ -939,6 +1015,77 @@
                 </div>
 
                 <div class="changeBackgroundButton notoEmoji" id="changeBgButton" onclick="changeBackground()">🌜︎</div>
+
+                <br><br>
+
+                <div class="noMobile">
+                    <div class="langSpecific enText">
+                        <h2>URL parameters:</h2>
+
+                        <p>You can use custom web addresses to go directly to a specific section or even open the app in 
+                            a specific language or mode. It's very useful for browse bookmarks. Let's see some examples:
+                        </p>
+
+                        <ul>
+                            <li>
+                                <a href="/?section=dictionary" target="_blank">?section=dictionary</a>
+                                <em>(Opens directly in the dictionary sector)</em>
+                                <ul>
+                                    <p>Available options:</p>
+                                    <li><a href="/?section=dictionary" target="_blank">?section=dictionary</a></li>
+                                    <li><a href="/?section=minicourse" target="_blank">?section=minicourse</a></li>
+                                    <li><a href="/?section=settings" target="_blank">?section=settings</a></li>
+                                    <li><a href="/?section=transcriptor" target="_blank">?section=transcriptor</a></li>
+                                    <li><a href="/?section=conjugations" target="_blank">?section=conjugations</a></li>
+                                    <li><a href="/?section=declensions" target="_blank">?section=declensions</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/?mode=dark" target="_blank">?mode=dark</a>
+                                <em>(Opens app in the dar mode)</em>
+                            </li>
+                            <li>
+                                <a href="/?lang=ru" target="_blank">?lang=ru</a>
+                                <em>(Opens app in the Russian language)</em>
+                                <ul>
+                                    <p>Available options:</p>
+                                    <li><a href="/?lang=es" target="_blank">?lang=es</a></li>
+                                    <li><a href="/?lang=fr" target="_blank">?lang=fr</a></li>
+                                    <li><a href="/?lang=ptbr" target="_blank">?lang=ptbr</a></li>
+                                    <li><a href="/?lang=ru" target="_blank">?lang=ru</a></li>
+                                </ul>
+                            </li>
+                            <li>You can mix the parameters with &:
+                                <ul>
+                                    <li>
+                                        <a href="/?section=dictionary&lang=fr" target="_blank">?section=dictionary&lang=fr</a> 
+                                        <em>(the app starts with the dictionary section open in the French language)</em>
+                                    </li>
+                                    <li>
+                                        <a href="/?section=settings&lang=ptbr&mode=dark" target="_blank">?section=settings&lang=ptbr&mode=dark</a> 
+                                        <em>(the app starts with the settings section open in the Portuguese language, and in dark mode)</em>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                
+                    <div class="langSpecific esText">
+                        <h2>Alternar entre el modo oscuro y el modo claro</h2>
+                    </div>
+                
+                    <div class="langSpecific frText">
+                        <h2>Basculer entre le mode sombre et le mode clair</h2>
+                    </div>
+    
+                    <div class="langSpecific ptbrText">
+                        <h2>Alternar entre o modo escuro e o modo claro</h2>
+                    </div>
+                
+                    <div class="langSpecific ruText">
+                        <h2>Переключиться между темным и светлым режимом</h2>
+                    </div>
+                </div>
         
             </div>
 
@@ -1092,15 +1239,19 @@
                 <div id="ipa_tab" class="tabcontent" style="display: block;">
                     <textarea class="transcriptorInputTextArea" id="transcriptorInputTextArea2"></textarea>
                         <br>
-                        <button type="button" onclick="getWords ('transcriptorInputTextArea2', 'spt_outputTextArea', 'ipa_outputTextArea', 1);" style="margin-right: 20px; display: inline;"><strong>»»</strong></button>
+                        <button type="button" onclick="getWords ('transcriptorInputTextArea2', 'spt_outputTextArea', 'ipa_outputTextArea', 1);" 
+                        style="margin-right: 20px; display: inline;" class="commonButton" id="ipa_tab_button"><strong>»»</strong></button>
                         <div style="height: 10px;"></div>
                         <div id="ipa_outputTextArea"></div>
+                        <!-- <input type="button" id="en_buttonDictionar" value="Search" class="commonButton"
+                    onclick="startSbSearch ('listOfWordsEnglish', 'en_inputTextArea', 'en_result', 99);" /> -->
                 </div>
                 
                 <div id="spt_tab" class="tabcontent">
                 <textarea class="transcriptorInputTextArea" id="transcriptorInputTextArea1"></textarea>
                     <br>
-                    <button type="button" onclick="getWords ('transcriptorInputTextArea1', 'spt_outputTextArea', 'ipa_outputTextArea', 0);" style="margin-right: 20px; display: inline;"><strong>»»</strong></button>
+                    <button type="button" onclick="getWords ('transcriptorInputTextArea1', 'spt_outputTextArea', 'ipa_outputTextArea', 0);" 
+                    style="margin-right: 20px; display: inline;" class="commonButton"  id="spt_tab_button"><strong>»»</strong></button>
                     <div style="height: 10px;"></div>
                     <div id="spt_outputTextArea"></div>
                 </div>
@@ -1136,9 +1287,75 @@
                     <h1>Словарь спряжений глаголов</h1>
                 </div>
 
-                <br><br>
+                <br>
                 <input type="text" class="inputTextArea" id="cjg_inputTextArea" />
                 <input type="button" id="en_buttonDictionar" value="»»" onclick="startSbSearch ('listOfConjugations', 'cjg_inputTextArea', 'cjg_result', 0);" />
+                <br><br>
+                <div class="langSpecific enText">
+                    Change dictionary:<br>
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('en', 'sectionDictionary')" value="En-Sb" 
+                    title="English-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('es', 'sectionDictionary')" value="Es-Sb" 
+                    title="Spanish-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('fr', 'sectionDictionary')" value="Fr-Sb" 
+                    title="French-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('ptbr', 'sectionDictionary')" value="Pt-Sb" 
+                    title="Portuguese-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('ru', 'sectionDictionary')" value="Ru-Sb" 
+                    title="Russian-Sambahsa" />
+                </div>
+                <div class="langSpecific esText">
+                    Cambiar diccionario:<br>
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('en', 'sectionDictionary')" value="In-Sb" 
+                    title="Inglés-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('es', 'sectionDictionary')" value="Es-Sb" 
+                    title="Español-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('fr', 'sectionDictionary')" value="Fr-Sb" 
+                    title="Francés-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('ptbr', 'sectionDictionary')" value="Pt-Sb" 
+                    title="Portugués-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('ru', 'sectionDictionary')" value="Ru-Sb" 
+                    title="Ruso-Sambahsa" />
+                </div>
+                <div class="langSpecific frText">
+                    Changer de dictionnaire&nbsp;:<br>
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('en', 'sectionDictionary')" value="An-Sb" 
+                    title="Anglais-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('es', 'sectionDictionary')" value="Es-Sb" 
+                    title="Espagnol-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('fr', 'sectionDictionary')" value="Fr-Sb" 
+                    title="Français-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('ptbr', 'sectionDictionary')" value="Pt-Sb" 
+                    title="Portugais-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('ru', 'sectionDictionary')" value="Ru-Sb" 
+                    title="Russe-Sambahsa" />
+                </div>
+                <div class="langSpecific ptbrText">
+                    Mudar o dicionário:<br>
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('en', 'sectionDictionary')" value="In-Sb" 
+                    title="Inglês-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('es', 'sectionDictionary')" value="Es-Sb" 
+                    title="Espanhol-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('fr', 'sectionDictionary')" value="Fr-Sb" 
+                    title="Francês-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('ptbr', 'sectionDictionary')" value="Pt-Sb" 
+                    title="Português-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('ru', 'sectionDictionary')" value="Ru-Sb" 
+                    title="Russo-Sambahsa" />
+                </div>
+                <div class="langSpecific ruText">
+                    Изменить словарь:<br>
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('en', 'sectionDictionary')" value="Англ-Самб" 
+                    title="Английский-Самбаса" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('es', 'sectionDictionary')" value="Исп-Самб" 
+                    title="Испанский-Самбаса" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('fr', 'sectionDictionary')" value="Фр-Самб" 
+                    title="Французский-Самбаса" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('ptbr', 'sectionDictionary')" value="Порт-Самб" 
+                    title="Португальский-Самбаса" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('ru', 'sectionDictionary')" value="Рус-Самб" 
+                    title="Русско-Самбаса" />
+                </div>
                 <br><br>
                 <div id="cjg_result"></div>
 

@@ -78,6 +78,9 @@ function changeLanguage (lang) {
             dictionaryButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/books.svg' />Diccionario";
             settingsButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/cog.svg' />Configuraciones";
         }
+
+        document.getElementById("ipa_tab_button").innerHTML = "Transcribir";
+        document.getElementById("spt_tab_button").innerHTML = "Transcribir";
     }
     else if (lang == "fr") {
         document.getElementsByTagName('html')[0].setAttribute("lang","fr");
@@ -101,6 +104,9 @@ function changeLanguage (lang) {
             dictionaryButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/books.svg' />Dictionnaire";
             settingsButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/cog.svg' />Paramètres";
         }
+
+        document.getElementById("ipa_tab_button").innerHTML = "Transcrire";
+        document.getElementById("spt_tab_button").innerHTML = "Transcrire";
     }
     else if (lang == "ptbr") {
         document.getElementsByTagName('html')[0].setAttribute("lang","pt-BR");
@@ -124,6 +130,9 @@ function changeLanguage (lang) {
             dictionaryButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/books.svg' />Dicionário";
             settingsButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/cog.svg' />Configurações";
         }
+
+        document.getElementById("ipa_tab_button").innerHTML = "Transcrever";
+        document.getElementById("spt_tab_button").innerHTML = "Transcrever";
     }
     else if (lang == "ru") {
         document.getElementsByTagName('html')[0].setAttribute("lang","ru");
@@ -147,6 +156,9 @@ function changeLanguage (lang) {
             dictionaryButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/books.svg' />Словарь";
             settingsButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/cog.svg' />Настройки";
         }
+
+        document.getElementById("ipa_tab_button").innerHTML = "Транскрибировать";
+        document.getElementById("spt_tab_button").innerHTML = "Транскрибировать";
     }
     else {
         document.getElementsByTagName('html')[0].setAttribute("lang","en");
@@ -170,6 +182,9 @@ function changeLanguage (lang) {
             dictionaryButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/books.svg' />Dictionary";
             settingsButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/cog.svg' />Settings";
         }
+
+        document.getElementById("ipa_tab_button").innerHTML = "Transcribe";
+        document.getElementById("spt_tab_button").innerHTML = "Transcribe";
     }
 }
 
@@ -183,6 +198,11 @@ function changeSection (nameOfTheSection) {
 
     document.getElementById(nameOfTheSection).style.display = "block";
     document.getElementsByTagName('html')[0].setAttribute("currentSection", nameOfTheSection);
+}
+
+function changeLanguageAndSection (lang, nameOfTheSection) {
+    changeLanguage (lang);
+    changeSection (nameOfTheSection);
 }
 
 function changeChapter (chaptersName) {
@@ -363,6 +383,7 @@ function start () {
     }
 
     // Checks whether the device is mobile or not
+    // It's a web browser
     if (!(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i))) {
         let menu = document.getElementsByTagName("nav")[0];
         let topNavExtraSpace = document.getElementById("topNavExtraSpace");
@@ -378,5 +399,44 @@ function start () {
             menuIcons[counter].style.display = "none";
         }
     }
-}
+    // It's mobile
+    else {
+        let noMobile = document.getElementsByClassName("noMobile");
 
+        for (let counter = 0; counter < noMobile.length; counter++) {
+            noMobile[counter].style.display = "none";
+        }
+    }
+
+    //Check parameters
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const language = urlParams.get('lang');
+    const section = urlParams.get('section');
+    const mode = urlParams.get('mode');
+
+    if (language == 'ptbr' || language == 'es' || language == 'fr' || language == 'ru') {changeLanguage (language);}
+    else if (language === null) {/*Do nothing*/}
+    else {changeLanguage ('en');}
+
+    if (section == "sectionHome" || section == "sectionGrammar" || section == "sectionDictionary" || section == "sectionSettings" || 
+        section == "transcriptor" || section == "conjugations" || section == "declensions") {
+        changeSection (section);
+    }
+    else if (section == "grammar" || section == "minicourse") {changeSection ("sectionGrammar");}
+    else if (section == "dictionary") {changeSection ("sectionDictionary");}
+    else if (section == "settings") {changeSection ("sectionSettings");}
+    else if (section === null) {/*Do nothing*/}
+    else {changeSection ("sectionHome");}
+
+    if (mode == "dark") {
+        changeBackgroundToDarkMode();
+    }
+    else if (mode == "light") {
+        changeBackgroundToLightMode();
+    }
+    else {
+        // Do nothing
+    }
+
+}
