@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sambahsa APP</title>
+        <link rel="stylesheet" href="resources/css/styles.css">
+        <script src="main.js" defer></script>
+        <script src="resources/js/sambahsa_pronunciator.js" defer></script>
+        <script src="resources/js/js_dictionar.js" defer></script>
+    </head>
+    <body onload="start()">
+
+        <div id="topNav">Sambahsa <img src="resources/img/symbol-kwit.png" alt="kwekwl" id="kwekwl"> Mundialect</div>
+        <div id="topNavExtraSpace"></div>
+
+        <div id="box">
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!------------------------------------------ SECTION: HOME ------------------------------------------>
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+
+            <div class="section" id="sectionHome">
+        
+                <div class="langSpecific enText">
+            
+                    <h1>HOME</h1>
+
+                    <div class="listOfButtons">
+                        <div class="mediumButton" onclick="changeSection('whatis')">What is Sambahsa?</div>
+                        <div class="mediumButton" onclick="changeSection('transcriptor')">Phonetic Transcriptor</div>
+                        <div class="mediumButton" onclick="changeSection('conjugations')">Dictionary of Conjugations</div>
+                        <div class="mediumButton" onclick="changeSection('declensions')">List of Declensions</div>
+                    </div>
+            
+                </div>
+            
+                <div class="langSpecific esText">
+        
+                    <h1>INICIO</h1>
+
+                    <div class="listOfButtons">
+                        <div class="mediumButton" onclick="changeSection('whatis')">¿Qué es sambahsa?</div>
+                        <div class="mediumButton" onclick="changeSection('transcriptor')">Transcriptor Fonético</div>
+                        <div class="mediumButton" onclick="changeSection('conjugations')">Diccionario de Conjugaciones</div>
+                        <div class="mediumButton" onclick="changeSection('declensions')">Lista de Declinaciones</div>
+                    </div>
+            
+                </div>
+            
+                <div class="langSpecific frText">
+        
+                    <h1>ACCUEIL</h1>
+
+                    <div class="listOfButtons">
+                        <div class="mediumButton" onclick="changeSection('whatis')">Qu'est-ce que Sambahsa&nbsp;?</div>
+                        <div class="mediumButton" onclick="changeSection('transcriptor')">Transcripteur Phonétique</div>
+                        <div class="mediumButton" onclick="changeSection('conjugations')">Dictionnaire de Conjugaisons</div>
+                        <div class="mediumButton" onclick="changeSection('declensions')">Liste des Déclinaisons</div>
+                    </div>
+            
+                </div>
+            
+                <div class="langSpecific ruText">
+        
+                    <h1>ГЛАВНАЯ</h1>
+
+                    <div class="listOfButtons">
+                        <div class="mediumButton" onclick="changeSection('whatis')">Что такое Самбахса?</div>
+                        <div class="mediumButton" onclick="changeSection('transcriptor')">Фонетический Транскриптор</div>
+                        <div class="mediumButton" onclick="changeSection('conjugations')">Словарь спряжений</div>
+                        <div class="mediumButton" onclick="changeSection('declensions')">Список склонений</div>
+                    </div>
+            
+                </div>
+            
+                <div class="langSpecific ptbrText">
+            
+                    <h1>INÍCIO</h1>
+
+                    <div class="listOfButtons">
+                        <div class="mediumButton" onclick="changeSection('whatis')">O que é sambahsa?</div>
+                        <div class="mediumButton" onclick="changeSection('transcriptor')">Transcritor Fonético</div>
+                        <div class="mediumButton" onclick="changeSection('conjugations')">Dicionário de conjugações</div>
+                        <div class="mediumButton" onclick="changeSection('declensions')">Lista de Declinações</div>
+                    </div>
+            
+                </div>
+            
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!---------------------------------------- SECTION: GRAMMAR ----------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            
+            <div class="section" id="sectionGrammar">
+
+                <h1 style="text-transform: uppercase;">
+                    <span class="langSpecific enText">Mini course</span>
+                    <span class="langSpecific esText">Minicurso</span>
+                    <span class="langSpecific frText">Mini-cours</span>
+                    <span class="langSpecific ptbrText">Minicurso</span>
+                    <span class="langSpecific ruText">Мини-курс</span>
+                </h1>
+
+                <div class="courseSection courseSectionTableOfContents" style="display: block;">
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!------------------------------ SECTION: GRAMMAR = Table of Contents ------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+
+                    <div class="courseChapter" onclick="changeChapter ('courseSectionPronunciation')">
+                        <span class="langSpecific enText">Pronunciation</span>
+                        <span class="langSpecific esText">Pronunciación</span>
+                        <span class="langSpecific frText">Prononciation</span>
+                        <span class="langSpecific ptbrText">Pronúncia</span>
+                        <span class="langSpecific ruText">Произношение</span>
+                    </div>
+
+                    <div class="courseChapter" onclick="changeChapter ('courseSectionArticles1')">
+                        <span class="langSpecific enText">Articles I</span>
+                        <span class="langSpecific esText">Artículos I</span>
+                        <span class="langSpecific frText">Articles I</span>
+                        <span class="langSpecific ptbrText">Artigos I</span>
+                        <span class="langSpecific ruText">Артикли н°1</span>
+                    </div>
+
+                    <div class="courseChapter" onclick="changeChapter ('courseSectionAdjectives')">
+                        <span class="langSpecific enText">Adjectives</span>
+                        <span class="langSpecific esText">Adjetivos</span>
+                        <span class="langSpecific frText">Adjectifs</span>
+                        <span class="langSpecific ptbrText">Adjetivos</span>
+                        <span class="langSpecific ruText">Прилагательные</span>
+                    </div>
+
+                    <div class="courseChapter" onclick="changeChapter ('courseSectionPronouns')">
+                        <span class="langSpecific enText">Pronouns</span>
+                        <span class="langSpecific esText">Pronombres</span>
+                        <span class="langSpecific frText">Pronoms</span>
+                        <span class="langSpecific ptbrText">Pronomes</span>
+                        <span class="langSpecific ruText">Местоимения</span>
+                    </div>
+
+                    <div class="courseChapter" onclick="changeChapter ('courseSectionVerbs1')">
+                        <span class="langSpecific enText">Verbs I</span>
+                        <span class="langSpecific esText">Verbos I</span>
+                        <span class="langSpecific frText">Verbes I</span>
+                        <span class="langSpecific ptbrText">Verbos I</span>
+                        <span class="langSpecific ruText">Глаголы н°1</span>
+                    </div>
+
+                    <div class="courseChapter" onclick="changeChapter ('courseSectionArticles2')">
+                        <span class="langSpecific enText">Articles II</span>
+                        <span class="langSpecific esText">Artículos II</span>
+                        <span class="langSpecific frText">Articles II</span>
+                        <span class="langSpecific ptbrText">Artigos II</span>
+                        <span class="langSpecific ruText">Артикли н°2</span>
+                    </div>
+
+                    <div class="courseChapter" onclick="changeChapter ('courseSectionDeclensions')">
+                        <span class="langSpecific enText">Declensions</span>
+                        <span class="langSpecific esText">Declinaciones</span>
+                        <span class="langSpecific frText">Déclinaisons</span>
+                        <span class="langSpecific ptbrText">Declinações</span>
+                        <span class="langSpecific ruText">Склонения</span>
+                    </div>
+
+                    <div class="courseChapter" onclick="changeChapter ('courseSectionVerbs2')">
+                        <span class="langSpecific enText">Verbs II</span>
+                        <span class="langSpecific esText">Verbos II</span>
+                        <span class="langSpecific frText">Verbes II</span>
+                        <span class="langSpecific ptbrText">Verbos II</span>
+                        <span class="langSpecific ruText">Глаголы н°2</span>
+                    </div>
+
+                    <div class="courseChapter" onclick="changeChapter ('courseSectionVerbs3')">
+                        <span class="langSpecific enText">Verbs III</span>
+                        <span class="langSpecific esText">Verbos III</span>
+                        <span class="langSpecific frText">Verbes III</span>
+                        <span class="langSpecific ptbrText">Verbos III</span>
+                        <span class="langSpecific ruText">Глаголы н°3</span>
+                    </div>
+
+                    <div class="courseChapter" onclick="changeChapter ('courseSectionParticiplesAndGerund')">
+                        <span class="langSpecific enText">Participles and Gerund</span>
+                        <span class="langSpecific esText">Participios y Gerundios</span>
+                        <span class="langSpecific frText">Participes et Gérondif</span>
+                        <span class="langSpecific ptbrText">Particípios e Gerúndio</span>
+                        <span class="langSpecific ruText">Причастия и Герундий</span>
+                    </div>
+
+                    <div class="courseChapter" onclick="changeChapter ('courseSectionAccompaniedReading1')">
+                        <span class="langSpecific enText">Accompanied Reading I</span>
+                        <span class="langSpecific esText">Lectura Acompañada I</span>
+                        <span class="langSpecific frText">Lecture Accompagnée I</span>
+                        <span class="langSpecific ptbrText">Leitura Acompanhada I</span>
+                        <span class="langSpecific ruText">Сопровождаемое чтение н°1</span>
+                    </div>
+
+                </div>
+
+                <div class="courseSection courseSectionPronunciation">
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!---------------------------- SECTION: GRAMMAR = Pronunciation ------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                    <h2>
+                        <span class="langSpecific enText">Pronunciation</span>
+                        <span class="langSpecific esText">Pronunciación</span>
+                        <span class="langSpecific frText">Prononciation</span>
+                        <span class="langSpecific ptbrText">Pronúncia</span>
+                        <span class="langSpecific ruText">Произношение</span>
+                    </h2>
+                    <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">
+                        <img class="icon" src="resources/img/icons/left-arrow.svg">
+                    </div>
+
+                    <br>
+
+                    <p>
+                        <span class="langSpecific enText">
+                            In this course, we will make intensive use of the IPA <em>(<b>I</b>nternational <b>P</b>honetic <b>A</b>lphabet)</em>, 
+                        that has the function of transcribing the phonetics of the spoken language. Let's see some possible sounds for Sambahsa:
+                        </span>
+                        <span class="langSpecific esText">
+                            En este curso, haremos un uso intensivo del AFI <em>(<b>A</b>lfabeto <b>F</b>onético <b>I</b>nternacional)</em>, que tiene 
+                            la función de transcribir la fonética del lenguaje hablado. Veamos algunos sonidos posibles para Sambahsa.
+                        </span>
+                        <span class="langSpecific frText">
+                            Dans ce cours, nous ferons un usage intensif de l'API <em>(<b>A</b>lphabet <b>P</b>honétique <b>I</b>nternational)</em>, 
+                            qui a pour fonction de transcrire la phonétique de la langue parlée. Voyons quelques sons possibles pour le Sambahsa.
+                        </span>
+                        <span class="langSpecific ptbrText">
+                            Neste curso, faremos uso intensivo do AFI <em>(<b>A</b>lfabeto <b>F</b>onético <b>I</b>nternacional)</em>, que tem a 
+                            função de transcrever a fonética da língua falada. Vamos ver alguns sons possíveis para o sambahsa.
+                        </span>
+                        <span class="langSpecific ruText">
+                            В этом курсе мы будем интенсивно использовать МФА <em>(<b>М</b>еждународный <b>Ф</b>онетический <b>А</b>лфавит)</em>, 
+                            который служит для транскрипции фонетики устной речи. Давайте рассмотрим некоторые возможные звуки для Самбахсы.
+                        </span>
+                    </p>
+
+                    <div class="listOfButtons">
+
+                        <div class="soundButton" onclick="playPause('audio_a')">
+                            [a]<audio id="audio_a" src="resources/audio/a.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_ae')">
+                            [ɛ]<audio id="audio_ae" src="resources/audio/ae.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_e')">
+                            [e]<audio id="audio_e" src="resources/audio/e.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_ee')">
+                            [ə]<audio id="audio_ee" src="resources/audio/ee.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_i')">
+                            [i]<audio id="audio_i" src="resources/audio/i.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_o')">
+                            [o]<audio id="audio_o" src="resources/audio/o.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_oa')">
+                            [ɔ]<audio id="audio_oa" src="resources/audio/oa.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_u')">
+                            [u]<audio id="audio_u" src="resources/audio/u.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_y')">
+                            [y]<audio id="audio_y" src="resources/audio/ui.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_oe')">
+                            [ø]<audio id="audio_oe" src="resources/audio/oe.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_wa')">
+                            [wa]<audio id="audio_wa" src="resources/audio/wa.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_ya')">
+                            [ja]<audio id="audio_ya" src="resources/audio/ya.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_ao')">
+                            [aʊ̯]<audio id="audio_ao" src="resources/audio/ao.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_ba')">
+                            [ba]<audio id="audio_ba" src="resources/audio/ba.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_ka')">
+                            [ka]<audio id="audio_ka" src="resources/audio/ka.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_da')">
+                            [da]<audio id="audio_da" src="resources/audio/da.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_fa')">
+                            [fa]<audio id="audio_fa" src="resources/audio/fa.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_ga')">
+                            [ga]<audio id="audio_ga" src="resources/audio/ga.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_ha')">
+                            [ha]<audio id="audio_ha" src="resources/audio/ha.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_ja')">
+                            [ʒa]<audio id="audio_ja" src="resources/audio/ja.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_la')">
+                            [la]<audio id="audio_la" src="resources/audio/la.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_ma')">
+                            [ma]<audio id="audio_ma" src="resources/audio/ma.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_na')">
+                            [na]<audio id="audio_na" src="resources/audio/na.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_pa')">
+                            [pa]<audio id="audio_pa" src="resources/audio/pa.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_xa')">
+                            [xa]<audio id="audio_xa" src="resources/audio/xa.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_ca')">
+                            [ʃa]<audio id="audio_ca" src="resources/audio/ca.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_cca')">
+                            [ça]<audio id="audio_cca" src="resources/audio/cca.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_sa')">
+                            [sa]<audio id="audio_sa" src="resources/audio/sa.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_tha')">
+                            [θa]<audio id="audio_tha" src="resources/audio/tha.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_ta')">
+                            [ta]<audio id="audio_ta" src="resources/audio/ta.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_va')">
+                            [va]<audio id="audio_va" src="resources/audio/va.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_za')">
+                            [za]<audio id="audio_za" src="resources/audio/za.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_tca')">
+                            [t͡ʃa]<audio id="audio_tca" src="resources/audio/tca.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_dja')">
+                            [d͡ʒa]<audio id="audio_dja" src="resources/audio/dja.ogg" preload="auto"></audio>
+                        </div>
+
+                    </div>
+
+                    <br>
+                    <p>
+                        <span class="langSpecific enText">The R consonant can have different sounds, but you are not obliged to use all of them.</span>
+                        <span class="langSpecific esText">La consonante R puede tener diferentes sonidos, pero no tienes la obligación de usar todos 
+                            ellos.</span>
+                        <span class="langSpecific frText">La consonne R peut avoir différents sons, mais vous n'avez pas l'obligation de les utiliser 
+                            tous.</span>
+                        <span class="langSpecific ptbrText">A consoante R pode ter sons diferentes, mas você não tem a obrigação de usar todos.</span>
+                        <span class="langSpecific ruText">Согласная R может иметь разные звуки, но у вас нет обязательства использовать их все.</span>
+                    </p>
+
+                    <div class="listOfButtons">
+                        <div class="soundButton" onclick="playPause('audio_ra2')">
+                            [ʀa]<audio id="audio_ra2" src="resources/audio/ra2.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_rabr')">
+                            [ɾa]<audio id="audio_rabr" src="resources/audio/rabr.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_rra')">
+                            [ra]<audio id="audio_rra" src="resources/audio/rra.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_rla')">
+                            [ɺa]<audio id="audio_rla" src="resources/audio/rla.ogg" preload="auto"></audio>
+                        </div>
+
+                        <div class="soundButton" onclick="playPause('audio_ar')">
+                            [aʁ]<audio id="audio_ar" src="resources/audio/ar.ogg" preload="auto"></audio>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="langSpecific enText">
+                        <p>Now allow me to comment about some sounds:</p>
+
+                        <ul>
+                            <li>
+                                To reproduce [ø], just pronounce the sound [e] by pursing your lips.
+                                <ul>
+                                    <li>
+                                        Just to be clear about what I mean by “pursing your lips”. When you pronounce 
+                                        vowels like [a] and [e], your lips are relaxed, when you pronounce 
+                                        vowels like [o] and [u], your lips are rounded. If you try to pronounce the 
+                                        vowel [e] by pursing your lips (or with the lips rounded, it's the same thing!)
+                                        , you will actually get [ø].
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                To reproduce [y], just pronounce the sound [u] by pursing your lips.</li>
+                            <li>
+                                To reproduce [x], you raise your back of the tongue to the soft palate, 
+                                and then you release an air flow like you do with [f], but you do nothing with 
+                                your lip and teeth, all the articulation happens with the tongue.</li>
+                            <li>
+                                English supposedly doesn't have the [ç] sound, but it can end up emerging in 
+                                syllables starting with hu- like in “human”. I'll explain it anyway: 
+                                hold your tongue in the same position as when you pronounce [j], and 
+                                then try to pronounce [ʃ] without moving your lips or teeth.</li>
+                            <li>
+                                As I said earlier, the R consonant can have different sounds depending on 
+                                the case, however <u>you have no obligation of using all of those sounds</u>. For 
+                                example, words like “rudh” and “rlwotou” are 
+                                respectively transcripted as [<b>ʀ</b>ud] and [<b>ɺ</b>wo'tuː], but you can 
+                                simply pronounce them as [<b>ɾ</b>ud] and [<b>ɾ</b>wo'tuː]. Please, notice 
+                                that the [ɾ] sound is not present in words like “red” (wich is 
+                                pronounced as /ɹɛd/ by the way), but in the “t” of “water” like many 
+                                Americans pronounce this word.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="langSpecific esText">
+                        <p>Ahora permíteme comentarte acerca de algunos sonidos:</p>
+
+                        <ul>
+                            <li>
+                                Para reproducir [ø], simplemente pronuncia el sonido [e] frunciendo los labios.
+                                <ul>
+                                    <li>
+                                        Solo para ser claro sobre lo que quiero decir con "fruncir los labios". Cuando pronuncias 
+                                        vocales como [a] y [e], tus labios están relajados, cuando pronuncias 
+                                        vocales como [o] y [u], tus labios están redondeados. Si intentas pronunciar la 
+                                        vocal [e] frunciendo los labios (o con los labios redondeados, ¡es lo mismo!), 
+                                        obtendrás realmente [ø].
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Para reproducir [y], simplemente pronuncia el sonido [u] frunciendo los labios.</li>
+                            <li>
+                                Para pronunciar el sonido [v], haces la misma articulación que el sonido [f], utilizas 
+                                tu labio inferior con tus dientes superiores, la diferencia es que para pronunciar [v] 
+                                necesitas hacer vibrar tus cuerdas vocales. Te explico: ¿cuál es la diferencia entre [t] 
+                                y [d] (ambos creados colocando la punta de tu lengua cerca de tus dientes superiores)? Y 
+                                ¿cuál es la diferencia entre [p] y [b] (ambos hechos con tus labios)? La respuesta es que 
+                                [t] y [p] son sordos, mientras que [d] y [b] son sonoros, en otras palabras, [b] es la 
+                                versión sonora de [p], y [d] es la versión sonora de [t]. Es la misma relación para [f] 
+                                y [v], [v] es la versión sonora de [f]. Sé que aún no es simple, pero si quieres aprender 
+                                otros idiomas, de todas formas tendrás que dominar este sonido.
+                            </li>
+                            <li>
+                                [z] es la versión sonora de [s].
+                            </li>
+                            <li>
+                                [ʒ] es la versión sonora de [ʃ].
+                            </li>
+                            <li>
+                                Para pronunciar el sonido [ç],  
+                                mantén tu lengua en la misma posición que cuando pronuncias [j], y 
+                                luego intenta pronunciar [ʃ] sin mover tus labios ni tus dientes.
+                            </li>
+                            <li>
+                                Como mencioné antes, la consonante R puede tener diferentes sonidos dependiendo del 
+                                contexto, sin embargo, <u>no tienes la obligación de usar todos esos sonidos</u>. 
+                                Por ejemplo, palabras como “rudh” y “rlwotou” se 
+                                transcriben respectivamente como [<b>ʀ</b>ud] y [<b>ɺ</b>wo'tuː], pero puedes 
+                                simplemente pronunciarlas como [<b>ɾ</b>ud] y [<b>ɾ</b>wo'tuː].
+                            </li>
+                        </ul>
+
+
+                    </div>
+                    <div class="langSpecific frText">
+                        <p>Maintenant, permettez-moi de commenter quelques sons :</p>
+
+                        <ul>
+                            <li>
+                                Pour reproduire [x], élevez l'arrière de votre langue vers le palais mou, puis 
+                                libérez un flux d'air, similaire à ce que vous faites avec [f], mais sans impliquer 
+                                vos lèvres ni vos dents ; toute l'articulation se fait avec la langue.
+                            </li>
+                            <li>
+                                Pour reproduire [x],  
+                                maintenez votre langue dans la même position que lorsque vous prononcez [j], 
+                                puis essayez de prononcer [ʃ] sans bouger vos lèvres ni vos dents.
+                            </li>
+                            <li>
+                                Comme je l'ai mentionné précédemment, la consonne R peut avoir différents sons 
+                                en fonction du contexte ; cependant, <u>vous n'avez pas l'obligation d'utiliser 
+                                    tous ces sons</u>. Par exemple,mots comme "rudh" et 
+                                    "rlwotou" sont transcrite respectivement comme [<b>ʀ</b>ud] et [<b>ɺ</b>wo'tuː], 
+                                    mais vous pouvez simplement les prononcer comme [<b>ɾ</b>ud] et [<b>ɾ</b>wo'tuː].
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="langSpecific ptbrText">
+                        <p>Agora, permita-me comentar sobre alguns sons:</p>
+
+                        <ul>
+                            <li>
+                                Para reproduzir [ø], simplesmente pronuncie o som [e] franzindo os lábios.
+                                <ul>
+                                    <li>
+                                        Apenas para ser claro sobre o que quero dizer com "franzir os lábios": 
+                                        quando se pronuncia vogais como [a] e [e], seus lábios ficam relaxados, e 
+                                        quando se pronuncia vogais como [o] e [u], seus lábios ficam arredondados. 
+                                        Se tentar pronunciar a vogal [e] franzindo os lábios (ou com os lábios 
+                                        arredondados, é a mesma coisa!) se obterá [ø].
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Para reproduzir [y], simplesmente pronuncie o som [u] franzindo os lábios.
+                            </li>
+                            <li>
+                                Para reproduzir [x], eleve a parte de trás da língua até o palato mole e, em seguida, 
+                                libere um fluxo de ar, semelhante ao que faz com [f], mas sem envolver os lábios 
+                                nem os dentes; toda a articulação ocorre com a língua.
+                            </li>
+                            <li>
+                                O português brasileiro supostamente não tem o som [ç], mas pode acabar surgindo em 
+                                sílabas que começam com ri-, como em “rio”. Eu vou explicar de qualquer forma: 
+                                mantenha sua língua na mesma posição que quando pronuncia [j], e então tente pronunciar 
+                                [ʃ] sem mover seus lábios ou dentes.
+                            </li>
+                            <li>
+                                Como mencionei anteriormente, a consoante R pode ter diferentes sons dependendo do 
+                                contexto, no entanto, <u>você não tem a obrigação de usar todos esses sons</u>. 
+                                Por exemplo, palavras como “rudh” e “rlwotou” são transcritas respectivamente 
+                                como [<b>ʀ</b>ud] e [<b>ɺ</b>wo'tuː], mas você pode simplesmente pronunciá-las como 
+                                [<b>ɾ</b>ud] e [<b>ɾ</b>wo'tuː].
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="langSpecific ruText">
+                        <p>Теперь позвольте мне прокомментировать некоторые звуки:</p>
+
+                        <ul>
+                            <li>
+                                Чтобы воспроизвести [ø], просто произнесите звук [e], сжимая губы.
+                                <ul>
+                                    <li>
+                                        Просто чтобы было ясно, что я имею в виду под "сжатием губ": когда вы 
+                                        произносите гласные типа [a] и [e], ваши губы расслаблены, а когда вы 
+                                        произносите гласные типа [o] и [u], ваши губы округлены. Если вы попытаетесь 
+                                        произнести гласную [e] сжимая губы (или с округленными губами, это то же 
+                                        самое!), вы на самом деле получите [ø].
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Чтобы воспроизвести [y], просто произнесите звук [u], сжимая губы.
+                            </li>
+                            <li>
+                                Чтобы воспроизвести [x], поднимите заднюю часть языка к мягкому небу, а затем освободите 
+                                поток воздуха, подобно тому, как вы делаете с [f], но не задействуйте губы и зубы; 
+                                вся артикуляция происходит с языком.
+                            </li>
+                            <li>
+                                Считается, что в английском языке нет этого звука [ç], но он может появиться в слогах, 
+                                начинающихся с 'hu-', как в "human". Я объясню это все равно: держите язык в том же 
+                                положении, что и при произношении [j], а затем попробуйте произнести [ʃ] без движения губ и зубов.
+                            </li>
+                            <li>
+                                Как я упомянул ранее, согласная R может иметь разные звуки в зависимости от 
+                                контекста, однако <u>вы не обязаны использовать все эти звуки</u>. Например, 
+                                произношение слов как "rudh" и "rlwotou" транскрибируется соответственно как 
+                                [<b>ʀ</b>ud] и [<b>ɺ</b>wo'tuː], но вы можете просто произносить их как 
+                                [<b>ɾ</b>ud] и [<b>ɾ</b>wo'tuː]. Пожалуйста, обратите внимание, что звук [ɾ] 
+                                отсутствует в словах типа "red" (которое произносится как /ɹɛd/, кстати), а 
+                                находится в "t" в слове "water", как это произносят многие американцы.
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="courseSection courseSectionArticles1">
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!------------------------------- SECTION: GRAMMAR = Articles 1 ------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                    <h2>
+                        <span class="langSpecific enText">Articles I</span>
+                        <span class="langSpecific esText">Artículos I</span>
+                        <span class="langSpecific frText">Articles I</span>
+                        <span class="langSpecific ptbrText">Artigos I</span>
+                        <span class="langSpecific ruText">Артикли н°1</span>
+                    </h2>
+                    <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">
+                        <img class="icon" src="resources/img/icons/left-arrow.svg">
+                    </div>
+                    
+                </div>
+
+                <div class="courseSection courseSectionAdjectives">
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------- SECTION: GRAMMAR = Adjectives ----------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                    <h2>
+                        <span class="langSpecific enText">Adjectives</span>
+                        <span class="langSpecific esText">Adjetivos</span>
+                        <span class="langSpecific frText">Adjectifs</span>
+                        <span class="langSpecific ptbrText">Adjetivos</span>
+                        <span class="langSpecific ruText">Прилагательные</span>
+                    </h2>
+                    <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">
+                        <img class="icon" src="resources/img/icons/left-arrow.svg">
+                    </div>
+                    
+                </div>
+
+                <div class="courseSection courseSectionPronouns">
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!----------------------------------- SECTION: GRAMMAR = Pronouns ----------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                    <h2>
+                        <span class="langSpecific enText">Pronouns</span>
+                        <span class="langSpecific esText">Pronombres</span>
+                        <span class="langSpecific frText">Pronoms</span>
+                        <span class="langSpecific ptbrText">Pronomes</span>
+                        <span class="langSpecific ruText">Местоимения</span>
+                    </h2>
+                    <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">
+                        <img class="icon" src="resources/img/icons/left-arrow.svg">
+                    </div>
+                    
+                </div>
+
+                <div class="courseSection courseSectionVerbs1">
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!------------------------------------ SECTION: GRAMMAR = Verbs 1 ----------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                    <h2>
+                        <span class="langSpecific enText">Verbs I</span>
+                        <span class="langSpecific esText">Verbos I</span>
+                        <span class="langSpecific frText">Verbes I</span>
+                        <span class="langSpecific ptbrText">Verbos I</span>
+                        <span class="langSpecific ruText">Глаголы н°1</span>
+                    </h2>
+                    <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">
+                        <img class="icon" src="resources/img/icons/left-arrow.svg">
+                    </div>
+                    
+                </div>
+
+                <div class="courseSection courseSectionArticles2">
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!------------------------------- SECTION: GRAMMAR = Articles 2 ------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <h2>
+                    <span class="langSpecific enText">Articles II</span>
+                    <span class="langSpecific esText">Artículos II</span>
+                    <span class="langSpecific frText">Articles II</span>
+                    <span class="langSpecific ptbrText">Artigos II</span>
+                    <span class="langSpecific ruText">Артикли н°2</span>
+                </h2>
+                    <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">G
+                        <img class="icon" src="resources/img/icons/left-arrow.svg">
+                    </div>
+                    
+                </div>
+
+                <div class="courseSection courseSectionDeclensions">
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!------------------------------ SECTION: GRAMMAR = Declensions ------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                    <h2>
+                        <span class="langSpecific enText">Declensions</span>
+                        <span class="langSpecific esText">Declinaciones</span>
+                        <span class="langSpecific frText">Déclinaisons</span>
+                        <span class="langSpecific ptbrText">Declinações</span>
+                        <span class="langSpecific ruText">Склонения</span>
+                    </h2>
+                    <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">
+                        <img class="icon" src="resources/img/icons/left-arrow.svg">
+                    </div>
+                    
+                </div>
+
+                <div class="courseSection courseSectionVerbs2">
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!------------------------------------ SECTION: GRAMMAR = Verbs 2 ----------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <h2>
+                    <span class="langSpecific enText">Verbs II</span>
+                    <span class="langSpecific esText">Verbos II</span>
+                    <span class="langSpecific frText">Verbes II</span>
+                    <span class="langSpecific ptbrText">Verbos II</span>
+                    <span class="langSpecific ruText">Глаголы н°2</span>
+                </h2>
+                    <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">
+                        <img class="icon" src="resources/img/icons/left-arrow.svg">
+                    </div>
+                    
+                </div>
+
+                <div class="courseSection courseSectionVerbs3">
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!------------------------------------ SECTION: GRAMMAR = Verbs 3 ----------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <h2>
+                    <span class="langSpecific enText">Verbs III</span>
+                    <span class="langSpecific esText">Verbos III</span>
+                    <span class="langSpecific frText">Verbes III</span>
+                    <span class="langSpecific ptbrText">Verbos III</span>
+                    <span class="langSpecific ruText">Глаголы н°3</span>
+                </h2>
+                    <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">
+                        <img class="icon" src="resources/img/icons/left-arrow.svg">
+                    </div>
+                    
+                </div>
+
+                <div class="courseSection courseSectionParticiplesAndGerund">
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!----------------------------- SECTION: GRAMMAR = Participles and Gerund --------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                    <h2>
+                        <span class="langSpecific enText">Participles and Gerund</span>
+                        <span class="langSpecific esText">Participios y Gerundios</span>
+                        <span class="langSpecific frText">Participes et Gérondif</span>
+                        <span class="langSpecific ptbrText">Particípios e Gerúndio</span>
+                        <span class="langSpecific ruText">Причастия и Герундий</span>
+                    </h2>
+                    <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">
+                        <img class="icon" src="resources/img/icons/left-arrow.svg">
+                    </div>
+                    
+                </div>
+
+                <div class="courseSection courseSectionAccompaniedReading1">
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!------------------------------ SECTION: GRAMMAR = Accompanied Reading 1 --------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                    <h2>
+                        <span class="langSpecific enText">Accompanied Reading I</span>
+                        <span class="langSpecific esText">Lectura Acompañada I</span>
+                        <span class="langSpecific frText">Lecture Accompagnée I</span>
+                        <span class="langSpecific ptbrText">Leitura Acompanhada I</span>
+                        <span class="langSpecific ruText">Сопровождаемое чтение н°1</span>
+                    </h2>
+                    <div class="courseChapter courseChapterComeBack" onclick="changeChapter ('courseSectionTableOfContents')">
+                        <img class="icon" src="resources/img/icons/left-arrow.svg">
+                    </div>
+                    
+                </div>
+            
+                
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!-------------------------------------- SECTION: DICTIONARY ---------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            
+            <div class="section" id="sectionDictionary">
+            
+                <div class="langSpecific enText">
+                    <h1>English-Sambahsa Dictionary</h1>
+                    <br><br>
+                    <input type="text" class="inputTextArea" id="en_inputTextArea" />
+                    <input type="button" id="en_buttonDictionar" value="»»" onclick="startSbSearch ('listOfWordsEnglish', 'en_inputTextArea', 'en_result', 99);" />
+                    <br><br>
+                    <div id="en_result"></div>
+                </div>
+            
+                <div class="langSpecific esText">
+                    <h1>Diccionario Español-Sambahsa</h1>
+                    <br><br>
+                    <input type="text" class="inputTextArea" id="es_inputTextArea" />
+                    <input type="button" id="es_buttonDictionar" value="»»" onclick="startSbSearch ('listOfWordsSpanish', 'es_inputTextArea', 'es_result', 2);" />
+                    <br><br>
+                    <div id="es_result"></div>
+                </div>
+            
+                <div class="langSpecific frText">
+                    <h1>Dictionnaire Français-Sambahsa</h1>
+                    <br><br>
+                    <input type="text" class="inputTextArea" id="fr_inputTextArea" />
+                    <input type="button" id="fr_buttonDictionar" value="»»" onclick="startSbSearch ('listOfWordsFrench', 'fr_inputTextArea', 'fr_result', 3);" />
+                    <br><br>
+                    <div id="fr_result"></div>
+                </div>
+            
+                <div class="langSpecific ptbrText">
+                    <h1>Dicionário Português-Sambahsa</h1>
+                    <br><br>
+                    <input type="text" class="inputTextArea" id="pt_inputTextArea" />
+                    <input type="button" id="pt_buttonDictionar" value="»»" onclick="startSbSearch ('listOfWordsPortuguese', 'pt_inputTextArea', 'pt_result', 1);" />
+                    <br><br>
+                    <div id="pt_result"></div>
+                </div>
+        
+                <div class="langSpecific ruText">
+                    <h1>Самбаса-русский словарь</h1>
+                    <br><br>
+                    <input type="text" class="inputTextArea" id="ru_inputTextArea" />
+                    <input type="button" id="ru_buttonDictionar" value="»»" onclick="startSbSearch ('listOfWordsRussian', 'ru_inputTextArea', 'ru_result', 5);" />
+                    <br><br>
+                    <div id="ru_result"></div>
+                </div>
+                
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------- SECTION: SETTINGS ----------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+        
+            <div class="section" id="sectionSettings">
+        
+                <div class="langSpecific enText">
+                    <h1>SETTINGS</h1>
+                    <h2>Change language</h2>
+                </div>
+            
+                <div class="langSpecific esText">
+                    <h1>CONFIGURACIONES</h1>
+                    <h2>Cambiar idioma</h2>
+                </div>
+            
+                <div class="langSpecific frText">
+                    <h1>PARAMÈTRES</h1>
+                    <h2>Changer la langue</h2>
+                </div>
+
+                <div class="langSpecific ptbrText">
+                    <h1>CONFIGURAÇÕES</h1>
+                    <h2>Mudar idioma</h2>
+                </div>
+            
+                <div class="langSpecific ruText">
+                    <h1>НАСТРОЙКИ</h1>
+                    <h2>Изменить язык</h2>
+                </div>
+        
+                <br>
+        
+                <div class="listOfButtons">
+                    <div class="smallButton" onclick="changeLanguage ('en')">English</div>
+                    <div class="smallButton" onclick="changeLanguage ('es')">Español</div>
+                    <div class="smallButton" onclick="changeLanguage ('fr')">Français</div>
+                    <div class="smallButton" onclick="changeLanguage ('ptbr')">Português</div>
+                    <div class="smallButton" onclick="changeLanguage ('ru')">Русский</div>
+                </div>
+
+                <br><br>
+
+                <div class="langSpecific enText">
+                    <h2>Toggle between dark and light mode</h2>
+                </div>
+            
+                <div class="langSpecific esText">
+                    <h2>Alternar entre el modo oscuro y el modo claro</h2>
+                </div>
+            
+                <div class="langSpecific frText">
+                    <h2>Basculer entre le mode sombre et le mode clair</h2>
+                </div>
+
+                <div class="langSpecific ptbrText">
+                    <h2>Alternar entre o modo escuro e o modo claro</h2>
+                </div>
+            
+                <div class="langSpecific ruText">
+                    <h2>Переключиться между темным и светлым режимом</h2>
+                </div>
+
+                <div class="changeBackgroundButton notoEmoji" id="changeBgButton" onclick="changeBackground()">🌜︎</div>
+        
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------- SECTION: WHAT IS ------------------------------------------>
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+
+            <div class="section" id="whatis">
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- English text --------------------------------->
+                <div class="langSpecific enText">
+
+                    <h1>What is Sambahsa?</h1>
+
+                    <p><strong>Sambahsa-Mundialect</strong> is an auxiliary language created by the French Dr. Olivier 
+                        Simon that had been released on the Internet in 2007. An auxiliary language has 
+                        the role of allowing the communication between different people whose mother 
+                        tongues are different, something that English makes possible nowadays, 
+                        however an auxiliary language has the differential of being easier to learn; 
+                        while it took years for a non-native to master English, it took only a matter 
+                        of months to master an auxiliary language.</p>
+
+
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- Spanish text --------------------------------->
+                <div class="langSpecific esText">
+
+                    <h1>¿Qué es sambahsa?</h1>
+
+                    <p><strong>Sambahsa-Mundialect</strong> es una lengua auxiliar creada por el Dr. Olivier Simon, 
+                        un francés, que se publicó en Internet en 2007. Una lengua auxiliar tiene la 
+                        función de permitir la comunicación entre personas cuyas lenguas maternas son 
+                        diferentes, algo que el inglés hace posible en la actualidad. Sin embargo, una 
+                        lengua auxiliar tiene la ventaja de ser más fácil de aprender. Mientras que 
+                        llevaría años a un no nativo dominar el inglés, solo se necesitaría cuestión 
+                        de meses para dominar una lengua auxiliar.</p>
+
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- French text ---------------------------------->
+                <div class="langSpecific frText">
+
+                    <h1>Qu'est-ce que Sambahsa&nbsp;?</h1>
+
+                    <p><strong>Sambahsa-Mundialect</strong> est une langue auxiliaire créée par le Dr. Olivier Simon, 
+                        un Français, qui a été mise en ligne sur Internet en 2007. Une langue auxiliaire 
+                        a pour rôle de permettre la communication entre des personnes dont les 
+                        langues maternelles sont différentes, ce que l'anglais permet de nos jours. 
+                        Cependant, une langue auxiliaire a l'avantage d'être plus facile à apprendre. 
+                        Alors qu'il faut des années à un non-natif pour maîtriser l'anglais, il ne faut 
+                        que quelques mois pour maîtriser une langue auxiliaire.</p>
+
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- Russian text --------------------------------->
+                <div class="langSpecific ruText">
+
+                    <h1>Что такое Самбахса?</h1>
+
+                    <p><strong>Самбаса-Мундиалект</strong> - это вспомогательный язык, созданный французским доктором 
+                        Оливье Симоном и выпущенный в Интернете в 2007 году. Вспомогательный язык 
+                        выполняет функцию обеспечения коммуникации между людьми, у которых разные 
+                        родные языки, что в настоящее время делает возможным английский. Однако 
+                        вспомогательный язык имеет преимущество в том, что его легче изучать; в то 
+                        время как для не-родного диктора потребовалось бы годы, чтобы овладеть 
+                        английским, для овладения вспомогательным языком потребовалось бы всего 
+                        несколько месяцев.</p>
+
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!-------------------------- Brazilian Portuguese text --------------------------->
+                <div class="langSpecific ptbrText">
+
+                    <h1>O que é sambahsa?</h1>
+
+                    <p><strong>Sambahsa-Mundialect</strong> é uma língua auxiliar criada pelo francês Dr. Olivier Simon 
+                        que fora lançada na internet em 2007. Uma língua auxiliar tem a função de permitir 
+                        a comunicação entre diferentes pessoas cujas línguas maternas são diferentes, algo 
+                        que o inglês permite hoje em dia, entretanto uma língua auxiliar tem o diferencial 
+                        de ser muito mas fácil de aprender; enquanto você levaria anos para dominar a 
+                        língua inglesa, você pode aprender uma língua auxiliar em questão de meses.</p>
+
+                </div>
+                
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!------------------------------------ SECTION: TRANSCRIPTOR ---------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+
+            <div class="section" id="transcriptor">
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- English text --------------------------------->
+                <div class="langSpecific enText">
+                    <h1>Phonetic Transcriptor</h1>
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- Spanish text --------------------------------->
+                <div class="langSpecific esText">
+                    <h1>Transcriptor Fonético</h1>
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- French text ---------------------------------->
+                <div class="langSpecific frText">
+                    <h1>Transcripteur Phonétique</h1>
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- Russian text --------------------------------->
+                <div class="langSpecific ruText">
+                    <h1>Фонетический Транскриптор</h1>
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!-------------------------- Brazilian Portuguese text --------------------------->
+                <div class="langSpecific ptbrText">
+                    <h1>Transcritor Fonético</h1>
+                </div>
+                
+
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'ipa_tab')">AFI</button>
+                    <button class="tablinks" onclick="openTab(event, 'spt_tab')">SPT</button>
+                </div>
+
+                <div id="ipa_tab" class="tabcontent" style="display: block;">
+                    <textarea class="transcriptorInputTextArea" id="transcriptorInputTextArea2"></textarea>
+                        <br>
+                        <button type="button" onclick="getWords ('transcriptorInputTextArea2', 'spt_outputTextArea', 'ipa_outputTextArea', 1);" style="margin-right: 20px; display: inline;"><strong>»»</strong></button>
+                        <div style="height: 10px;"></div>
+                        <div id="ipa_outputTextArea"></div>
+                </div>
+                
+                <div id="spt_tab" class="tabcontent">
+                <textarea class="transcriptorInputTextArea" id="transcriptorInputTextArea1"></textarea>
+                    <br>
+                    <button type="button" onclick="getWords ('transcriptorInputTextArea1', 'spt_outputTextArea', 'ipa_outputTextArea', 0);" style="margin-right: 20px; display: inline;"><strong>»»</strong></button>
+                    <div style="height: 10px;"></div>
+                    <div id="spt_outputTextArea"></div>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!------------------------------------ SECTION: CONJUGATIONS ---------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+
+            <div class="section" id="conjugations">
+
+                <div class="langSpecific enText">
+                    <h1>Dictionary of Verb Conjugations</h1>
+                </div>
+            
+                <div class="langSpecific esText">
+                    <h1>Diccionario de Conjugaciones de Verbos</h1>
+                </div>
+            
+                <div class="langSpecific frText">
+                    <h1>Dictionnaire des Conjugaisons de Verbes</h1>
+                </div>
+            
+                <div class="langSpecific ptbrText">
+                    <h1>Dicionário de Conjugações de Verbos</h1>
+                </div>
+        
+                <div class="langSpecific ruText">
+                    <h1>Словарь спряжений глаголов</h1>
+                </div>
+
+                <br><br>
+                <input type="text" class="inputTextArea" id="cjg_inputTextArea" />
+                <input type="button" id="en_buttonDictionar" value="»»" onclick="startSbSearch ('listOfConjugations', 'cjg_inputTextArea', 'cjg_result', 0);" />
+                <br><br>
+                <div id="cjg_result"></div>
+
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!---------------------------------- SECTION: LIST OF DECLENSIONS ----------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+
+            <div class="section" id="declensions">
+
+                <div class="langSpecific enText">
+                    <h1>List of Declensions</h1>
+                </div>
+            
+                <div class="langSpecific esText">
+                    <h1>Lista de Declinaciones</h1>
+                </div>
+            
+                <div class="langSpecific frText">
+                    <h1>Liste des Déclinaisons</h1>
+                </div>
+            
+                <div class="langSpecific ptbrText">
+                    <h1>Lista de Declinações</h1>
+                </div>
+        
+                <div class="langSpecific ruText">
+                    <h1>Список склонений</h1>
+                </div>
+
+                <table class="declensionTable">
+                    <tr style="background-color: #262626; color: #FFFFFF; border-color: #000000;">
+                        <th style="width: 25%;">
+                            <span class="langSpecific enText">Nominative</span>
+                            <span class="langSpecific esText">Nominativo</span>
+                            <span class="langSpecific frText">Nominatif</span>
+                            <span class="langSpecific ptbrText">Nominativo</span>
+                            <span class="langSpecific ruText">Именительный</span>
+                        </th>
+                        <th style="width: 25%;">
+                            <span class="langSpecific enText">Accusative</span>
+                            <span class="langSpecific esText">Acusativo</span>
+                            <span class="langSpecific frText">Accusatif</span>
+                            <span class="langSpecific ptbrText">Acusativo</span>
+                            <span class="langSpecific ruText">Винительный</span>
+                        </th>
+                        <th style="width: 25%;">
+                            <span class="langSpecific enText">Dative</span>
+                            <span class="langSpecific esText">Dativo</span>
+                            <span class="langSpecific frText">Datif</span>
+                            <span class="langSpecific ptbrText">Dativo</span>
+                            <span class="langSpecific ruText">Дательный</span>
+                        </th>
+                        <th style="width: 25%;">
+                            <span class="langSpecific enText">Genitive</span>
+                            <span class="langSpecific esText">Genitivo</span>
+                            <span class="langSpecific frText">Génitif</span>
+                            <span class="langSpecific ptbrText">Genitivo</span>
+                            <span class="langSpecific ruText">Родительный</span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">ego / io</td>
+                        <td class="tdAccusative">me</td>
+                        <td class="tdDative">mi</td>
+                        <td class="tdGenitive">—</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">tu</td>
+                        <td class="tdAccusative">te</td>
+                        <td class="tdDative">tib</td>
+                        <td class="tdDative">—</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">is</td>
+                        <td class="tdAccusative">iom</td>
+                        <td class="tdDative">ei</td>
+                        <td class="tdGenitive">ios</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">ia</td>
+                        <td class="tdAccusative">iam</td>
+                        <td class="tdDative">ay</td>
+                        <td class="tdGenitive">ias</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">id</td>
+                        <td class="tdAccusative">id</td>
+                        <td class="tdDative">ei</td>
+                        <td class="tdGenitive">ios</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">el</td>
+                        <td class="tdAccusative">el</td>
+                        <td class="tdDative">al</td>
+                        <td class="tdGenitive">al</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">wey</td>
+                        <td class="tdAccusative">nos</td>
+                        <td class="tdDative">nos</td>
+                        <td class="tdGenitive">—</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">yu</td>
+                        <td class="tdAccusative">vos</td>
+                        <td class="tdDative">vos</td>
+                        <td class="tdGenitive">—</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">ies</td>
+                        <td class="tdAccusative">iens</td>
+                        <td class="tdDative">ibs</td>
+                        <td class="tdGenitive">iom</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">ias</td>
+                        <td class="tdAccusative">ians</td>
+                        <td class="tdDative">iabs</td>
+                        <td class="tdGenitive">iam</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">ia</td>
+                        <td class="tdAccusative">ia</td>
+                        <td class="tdDative">ibs</td>
+                        <td class="tdGenitive">iom</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">i</td>
+                        <td class="tdAccusative">i</td>
+                        <td class="tdDative">im</td>
+                        <td class="tdGenitive">im</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">so</td>
+                        <td class="tdAccusative">tom</td>
+                        <td class="tdDative">tei</td>
+                        <td class="tdGenitive">tos</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">toy</td>
+                        <td class="tdAccusative">tens</td>
+                        <td class="tdDative">tibs</td>
+                        <td class="tdGenitive">tom</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">sa</td>
+                        <td class="tdAccusative">tam</td>
+                        <td class="tdDative">tay</td>
+                        <td class="tdGenitive">tas</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">tas</td>
+                        <td class="tdAccusative">tans</td>
+                        <td class="tdDative">tabs</td>
+                        <td class="tdGenitive">tam</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">tod</td>
+                        <td class="tdAccusative">tod</td>
+                        <td class="tdDative">tei</td>
+                        <td class="tdGenitive">tos</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">ta</td>
+                        <td class="tdAccusative">ta</td>
+                        <td class="tdDative">tibs</td>
+                        <td class="tdGenitive">tom</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">tel</td>
+                        <td class="tdAccusative">tel</td>
+                        <td class="tdDative">tal</td>
+                        <td class="tdGenitive">tal</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">ti</td>
+                        <td class="tdAccusative">ti</td>
+                        <td class="tdDative">tim</td>
+                        <td class="tdGenitive">tim</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">cis</td>
+                        <td class="tdAccusative">ciom</td>
+                        <td class="tdDative">cei</td>
+                        <td class="tdGenitive">cios</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">cies</td>
+                        <td class="tdAccusative">ciens</td>
+                        <td class="tdDative">cibs</td>
+                        <td class="tdGenitive">ciom</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">cia</td>
+                        <td class="tdAccusative">ciam</td>
+                        <td class="tdDative">ciay</td>
+                        <td class="tdGenitive">cias</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">cias</td>
+                        <td class="tdAccusative">cians</td>
+                        <td class="tdDative">ciabs</td>
+                        <td class="tdGenitive">ciam</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">cid</td>
+                        <td class="tdAccusative">cid</td>
+                        <td class="tdDative">cei</td>
+                        <td class="tdGenitive">cios</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">cia</td>
+                        <td class="tdAccusative">cia</td>
+                        <td class="tdDative">cibs</td>
+                        <td class="tdGenitive">ciom</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">cel</td>
+                        <td class="tdAccusative">cel</td>
+                        <td class="tdDative">cial</td>
+                        <td class="tdGenitive">cial</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">ci</td>
+                        <td class="tdAccusative">ci</td>
+                        <td class="tdDative">cim</td>
+                        <td class="tdGenitive">cim</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">qui</td>
+                        <td class="tdAccusative">quom</td>
+                        <td class="tdDative">quei</td>
+                        <td class="tdGenitive">quos</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">quis</td>
+                        <td class="tdAccusative">quom</td>
+                        <td class="tdDative">quei</td>
+                        <td class="tdGenitive">quos</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">quoy</td>
+                        <td class="tdAccusative">quens</td>
+                        <td class="tdDative">quibs</td>
+                        <td class="tdGenitive">quom</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">qua</td>
+                        <td class="tdAccusative">quam</td>
+                        <td class="tdDative">quay</td>
+                        <td class="tdGenitive">quas</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">quas</td>
+                        <td class="tdAccusative">quans</td>
+                        <td class="tdDative">quabs</td>
+                        <td class="tdGenitive">quam</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">quod</td>
+                        <td class="tdAccusative">quod</td>
+                        <td class="tdDative">quei</td>
+                        <td class="tdGenitive">quos</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">qua</td>
+                        <td class="tdAccusative">qua</td>
+                        <td class="tdDative">quibs</td>
+                        <td class="tdGenitive">quom</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">quel</td>
+                        <td class="tdAccusative">quel</td>
+                        <td class="tdDative">qual</td>
+                        <td class="tdGenitive">qual</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">qui</td>
+                        <td class="tdAccusative">qui</td>
+                        <td class="tdDative">quim</td>
+                        <td class="tdGenitive">quim</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">neis</td>
+                        <td class="tdAccusative">niom</td>
+                        <td class="tdDative">nei</td>
+                        <td class="tdGenitive">nios</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">noy</td>
+                        <td class="tdAccusative">niens</td>
+                        <td class="tdDative">neibs</td>
+                        <td class="tdGenitive">niom</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">nia</td>
+                        <td class="tdAccusative">niam</td>
+                        <td class="tdDative">niay</td>
+                        <td class="tdGenitive">nias</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">nias</td>
+                        <td class="tdAccusative">nians</td>
+                        <td class="tdDative">niabs</td>
+                        <td class="tdGenitive">niam</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">neid</td>
+                        <td class="tdAccusative">neid</td>
+                        <td class="tdDative">nei</td>
+                        <td class="tdGenitive">nios</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">nia</td>
+                        <td class="tdAccusative">nia</td>
+                        <td class="tdDative">neibs</td>
+                        <td class="tdGenitive">niom</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">nel</td>
+                        <td class="tdAccusative">nel</td>
+                        <td class="tdDative">nal</td>
+                        <td class="tdGenitive">nal</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">nei</td>
+                        <td class="tdAccusative">nei</td>
+                        <td class="tdDative">nim</td>
+                        <td class="tdGenitive">nim</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">to</td>
+                        <td class="tdAccusative">to</td>
+                        <td class="tdDative">ad to</td>
+                        <td class="tdGenitive">os to</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">quo</td>
+                        <td class="tdAccusative">quo</td>
+                        <td class="tdDative">ad quo</td>
+                        <td class="tdGenitive">os quo</td>
+                    </tr>
+                </table>
+
+                <br>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!--------------------------------------------------------------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------->
+        <!----------------------------------------- SECTION: MENU ------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------->
+
+        <div id="topNavExtraSpace"></div>
+        <nav>
+            <div class="menuItem" id="menuButtonHome" onclick="changeSection ('sectionHome')">
+                <img class="menuIcon" src="resources/img/icons/home.svg" />
+                Home
+            </div>
+            <div class="menuItem" id="menuButtonGrammar" onclick="changeSection ('sectionGrammar')">
+                <img class="menuIcon" src="resources/img/icons/book.svg" />
+                Minicourse
+            </div>
+            <div class="menuItem" id="menuButtonDictionary" onclick="changeSection ('sectionDictionary')">
+                <img class="menuIcon" src="resources/img/icons/books.svg" />
+                Dictionary
+            </div>
+            <div class="menuItem" id="menuButtonSettings" onclick="changeSection ('sectionSettings')">
+                <img class="menuIcon" src="resources/img/icons/cog.svg" />
+                Settings
+            </div>
+        </nav>
+
+        <div class="listOfWords" id="listOfWordsEnglish"></div>
+        <div class="listOfWords" id="listOfWordsSpanish"></div>
+        <div class="listOfWords" id="listOfWordsFrench"></div>
+        <div class="listOfWords" id="listOfWordsPortuguese"></div>
+        <div class="listOfWords" id="listOfWordsRussian"></div>
+        <div class="listOfWords" id="listOfConjugations"></div>
+
+        <script>
+
+            window.addEventListener("keypress", (event) => {
+                if (event.keyCode == 13) {
+
+                    let currentSection = document.getElementsByTagName('html')[0].getAttribute("currentSection");
+                    let lang = document.getElementsByTagName('html')[0].getAttribute("lang");
+
+                    let ipa_tab = document.getElementById("ipa_tab");
+                    let spt_tab = document.getElementById("spt_tab");
+
+                    if (currentSection == "sectionDictionary") {
+                        if (lang == "es") {
+                            startSbSearch ('listOfWordsSpanish', 'es_inputTextArea', 'es_result', 2);
+                        }
+                        else if (lang == "fr") {
+                            startSbSearch ('listOfWordsFrench', 'fr_inputTextArea', 'fr_result', 3);
+                        }
+                        else if (lang == "pt-BR" || lang == "pt") {
+                            startSbSearch ('listOfWordsPortuguese', 'pt_inputTextArea', 'pt_result', 1);
+                        }
+                        else if (lang == "ru") {
+                            startSbSearch ('listOfWordsRussian', 'ru_inputTextArea', 'ru_result', 5);
+                        }
+                        else {
+                            startSbSearch ('listOfWordsEnglish', 'en_inputTextArea', 'en_result', 99);
+                        }
+                    }
+                    else if (currentSection == "conjugations") {
+                        startSbSearch ('listOfConjugations', 'cjg_inputTextArea', 'cjg_result', 0);
+                    }
+                    else if (currentSection == "transcriptor") {
+                        if (spt_tab.style.display == "block") {
+                            getWords ('transcriptorInputTextArea1', 'spt_outputTextArea', 'ipa_outputTextArea', 0);
+                        }
+                        else {
+                            getWords ('transcriptorInputTextArea2', 'spt_outputTextArea', 'ipa_outputTextArea', 1);
+                        }
+                    }
+                }
+            })
+        </script>
+        
+    </body>
+</html>

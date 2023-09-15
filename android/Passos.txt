@@ -1,0 +1,55 @@
+Crie uma pasta para gerar o APK e entre lena
+
+npm init
+
+
+
+Crie a pasta www que será onde você colocá seu aplicativo web
+
+
+
+Instale o Capacitor
+
+npm i @capacitor/core
+npm i -D @capacitor/cli
+
+ 
+ 
+Questionário
+
+npx cap init
+
+
+
+Instale material para Android
+
+npm i @capacitor/android
+
+
+E então...
+
+npx cap add android
+
+
+
+Já temos um aplicativo viável para ser compilado, mas vamos adicionar os ícones.
+
+npm install @capacitor/assets --save-dev
+
+
+
+Copie a pasta android/resources/ para a pasta nova que você criou para gerar o aplicartivo Android
+
+
+
+Rode o comando:
+
+npx capacitor-assets generate
+
+
+
+Abra o aplicativo Android Studio e vá em Open para abrir a pasta adequada. Espere um tempinho. Com tudo carregado, Vá em Build e então Make Project
+
+
+
+O APK estará na pasta android/app/build/outputs/apk/debug/
