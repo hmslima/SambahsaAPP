@@ -72,14 +72,14 @@ function changeLanguage (lang) {
             //grammarButton.innerHTML = "Minicurso";
             dictionaryButton.innerHTML = "Diccionario";
             settingsButton.innerHTML = "Configuraciones";
-            transcriptorButton = "Transcriptor";
+            transcriptorButton.innerHTML = "Transcriptor";
         }
         else {
             homeButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/home.svg' />Inicio";
             //grammarButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/book.svg' />Minicurso";
             dictionaryButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/books.svg' />Diccionario";
             settingsButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/cog.svg' />Configuraciones";
-            transcriptorButton = "<img class='menuIcon' src='resources/img/icons/brackets.svg' />Transcriptor";
+            transcriptorButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/brackets.svg' />Transcriptor";
         }
 
         document.getElementById("ipa_tab_button").innerHTML = "Transcribir";
@@ -100,14 +100,14 @@ function changeLanguage (lang) {
             //grammarButton.innerHTML = "Mini-cours";
             dictionaryButton.innerHTML = "Dictionnaire";
             settingsButton.innerHTML = "Paramètres";
-            transcriptorButton = "Transcripteur";
+            transcriptorButton.innerHTML = "Transcripteur";
         }
         else {
             homeButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/home.svg' />Accueil";
             //grammarButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/book.svg' />Mini-cours";
             dictionaryButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/books.svg' />Dictionnaire";
             settingsButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/cog.svg' />Paramètres";
-            transcriptorButton = "<img class='menuIcon' src='resources/img/icons/brackets.svg' />Transcripteur";
+            transcriptorButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/brackets.svg' />Transcripteur";
         }
 
         document.getElementById("ipa_tab_button").innerHTML = "Transcrire";
@@ -116,7 +116,6 @@ function changeLanguage (lang) {
     else if (lang == "ptbr") {
         document.getElementsByTagName('html')[0].setAttribute("lang","pt-BR");
         for (counter = 0; counter < langPtBr.length; counter++) {
-            console.log(langPtBr[counter].innerHTML + " ||| " + langPtBr[counter].tagName)
             if (langPtBr[counter].tagName == "SPAN") {
                 langPtBr[counter].style.display = "inline";
             }
@@ -129,14 +128,14 @@ function changeLanguage (lang) {
             //grammarButton.innerHTML = "Minicurso";
             dictionaryButton.innerHTML = "Dicionário";
             settingsButton.innerHTML = "Configurações";
-            transcriptorButton = "Transcritor";
+            transcriptorButton.innerHTML = "Transcritor";
         }
         else {
             homeButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/home.svg' />Início";
             //grammarButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/book.svg' />Minicurso";
             dictionaryButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/books.svg' />Dicionário";
             settingsButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/cog.svg' />Configurações";
-            transcriptorButton = "<img class='menuIcon' src='resources/img/icons/brackets.svg' />Transcritor";
+            transcriptorButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/brackets.svg' />Transcritor";
         }
 
         document.getElementById("ipa_tab_button").innerHTML = "Transcrever";
@@ -157,14 +156,14 @@ function changeLanguage (lang) {
             //grammarButton.innerHTML = "Мини-курс";
             dictionaryButton.innerHTML = "Словарь";
             settingsButton.innerHTML = "Настройки";
-            transcriptorButton = "Транскрибер";
+            transcriptorButton.innerHTML = "Транскрибер";
         }
         else {
             homeButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/home.svg' />Главная";
             //grammarButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/book.svg' />Мини-курс";
             dictionaryButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/books.svg' />Словарь";
             settingsButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/cog.svg' />Настройки";
-            transcriptorButton = "<img class='menuIcon' src='resources/img/icons/brackets.svg' />Транскрибер";
+            transcriptorButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/brackets.svg' />Транскрибер";
         }
 
         document.getElementById("ipa_tab_button").innerHTML = "Транскрибировать";
@@ -185,14 +184,14 @@ function changeLanguage (lang) {
             //grammarButton.innerHTML = "Mini course";
             dictionaryButton.innerHTML = "Dictionary";
             settingsButton.innerHTML = "Settings";
-            transcriptorButton = "Transcriber";
+            transcriptorButton.innerHTML = "Transcriber";
             }
             else {
                 homeButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/home.svg' />Home";
                 //grammarButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/book.svg' />Mini course";
                 dictionaryButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/books.svg' />Dictionary";
                 settingsButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/cog.svg' />Settings";
-                transcriptorButton = "<img class='menuIcon' src='resources/img/icons/brackets.svg' />Transcriber";
+                transcriptorButton.innerHTML = "<img class='menuIcon' src='resources/img/icons/brackets.svg' />Transcriber";
             }
 
             document.getElementById("ipa_tab_button").innerHTML = "Transcribe";
@@ -380,8 +379,6 @@ function activatePhonetics(typeOfPhonetics) {
     let phoneticAlphabet = document.getElementsByClassName(typeOfPhonetics);
 
     let originalDisplay = getComputedStyle(phoneticAlphabet[0]).display;
-
-    console.log(originalDisplay);
 
     if (originalDisplay == "none") {
         for (let counter = 0; counter < phoneticAlphabet.length; counter++) {
