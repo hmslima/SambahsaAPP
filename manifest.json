@@ -3,7 +3,7 @@
     "name": "Sambahsa APP",
     "short_name": "Sambahsa APP",
     "description": "An application that provides many tools to assist Sambahsa learners.",
-    "start_url": "/",
+    "start_url": "/SambahsaAPP/",
     "scope": ".",
     "background_color": "#502D16",
     "theme_color": "#502D16",
