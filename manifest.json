@@ -1,0 +1,17 @@
+{
+    "lang": "en-us",
+    "name": "Sambahsa APP",
+    "short_name": "Sambahsa APP",
+    "description": "An application that provides many tools to assist Sambahsa learners.",
+    "start_url": "https://hmslima.com.br/SambahsaAPP/",
+    "background_color": "#502D16",
+    "theme_color": "#502D16",
+    "orientation": "any",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "android/resources/icon512.png",
+            "sizes": "512x512"
+        }
+    ]
+}

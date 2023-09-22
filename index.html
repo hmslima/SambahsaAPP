@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sambahsa APP</title>
+        <link rel="stylesheet" href="resources/css/styles.css">
+        <link rel="manifest" href="/manifest.json">
+        <script src="main.js" defer></script>
+        <script src="resources/js/sambahsa_pronunciator.js" defer></script>
+        <script src="resources/js/js_dictionar.js" defer></script>
+    </head>
+    <body onload="start()">
+
+        <div id="topNav">Sambahsa <img src="resources/img/symbol-kwit.png" alt="kwekwl" id="kwekwl"> Mundialect</div>
+        <div id="topNavExtraSpace"></div>
+
+        <div id="box">
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!------------------------------------------ SECTION: HOME ------------------------------------------>
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+
+            <div class="section" id="sectionHome">
+        
+                <div class="langSpecific enText">
+            
+                    <h1>HOME</h1>
+
+                    <div class="listOfButtons">
+                        <div class="mediumButton" onclick="changeSection('whatis')">What is Sambahsa?</div>
+                        <div class="mediumButton" onclick="changeSection('conjugations')">Dictionary of Conjugations</div>
+                        <div class="mediumButton" onclick="changeSection('declensions')">List of Declensions</div>
+                    </div>
+            
+                </div>
+            
+                <div class="langSpecific esText">
+        
+                    <h1>INICIO</h1>
+
+                    <div class="listOfButtons">
+                        <div class="mediumButton" onclick="changeSection('whatis')">¿Qué es sambahsa?</div>
+                        <div class="mediumButton" onclick="changeSection('conjugations')">Diccionario de Conjugaciones</div>
+                        <div class="mediumButton" onclick="changeSection('declensions')">Lista de Declinaciones</div>
+                    </div>
+            
+                </div>
+            
+                <div class="langSpecific frText">
+        
+                    <h1>ACCUEIL</h1>
+
+                    <div class="listOfButtons">
+                        <div class="mediumButton" onclick="changeSection('whatis')">Qu'est-ce que Sambahsa&nbsp;?</div>
+                        <div class="mediumButton" onclick="changeSection('conjugations')">Dictionnaire de Conjugaisons</div>
+                        <div class="mediumButton" onclick="changeSection('declensions')">Liste des Déclinaisons</div>
+                    </div>
+            
+                </div>
+            
+                <div class="langSpecific ruText">
+        
+                    <h1>ГЛАВНАЯ</h1>
+
+                    <div class="listOfButtons">
+                        <div class="mediumButton" onclick="changeSection('whatis')">Что такое Самбахса?</div>
+                        <div class="mediumButton" onclick="changeSection('conjugations')">Словарь спряжений</div>
+                        <div class="mediumButton" onclick="changeSection('declensions')">Список склонений</div>
+                    </div>
+            
+                </div>
+            
+                <div class="langSpecific ptbrText">
+            
+                    <h1>INÍCIO</h1>
+
+                    <div class="listOfButtons">
+                        <div class="mediumButton" onclick="changeSection('whatis')">O que é sambahsa?</div>
+                        <div class="mediumButton" onclick="changeSection('conjugations')">Dicionário de conjugações</div>
+                        <div class="mediumButton" onclick="changeSection('declensions')">Lista de Declinações</div>
+                    </div>
+            
+                </div>
+            
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!-------------------------------------- SECTION: DICTIONARY ---------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            
+            <div class="section" id="sectionDictionary">
+            
+                <div class="langSpecific enText">
+                    <h1>English-Sambahsa Dictionary</h1>
+                    <br>
+                    <input type="text" class="inputTextArea" id="en_inputTextArea" />
+                    <input type="button" id="en_buttonDictionar" value="Search" class="commonButton"
+                    onclick="startSbSearch ('listOfWordsEnglish', 'en_inputTextArea', 'en_result', 99);" /><br><br>
+                    <p class="noindent">Change language:</p>
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('es')" value="Es-Sb" 
+                    title="Spanish-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('fr')" value="Fr-Sb" 
+                    title="French-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('ptbr')" value="Pt-Sb" 
+                    title="Portuguese-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('ru')" value="Ru-Sb" 
+                    title="Russian-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeSection('conjugations')" value="Cjg" 
+                    title="Conjugations" />
+                    <br><br>
+                    <div id="en_result"></div>
+                </div>
+            
+                <div class="langSpecific esText">
+                    <h1>Diccionario Español-Sambahsa</h1>
+                    <br>
+                    <input type="text" class="inputTextArea" id="es_inputTextArea" />
+                    <input type="button" id="es_buttonDictionar" value="Buscar" class="commonButton"
+                    onclick="startSbSearch ('listOfWordsSpanish', 'es_inputTextArea', 'es_result', 2);" /><br><br>
+                    <p class="noindent">Cambiar idioma:</p>
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('en')" value="In-Sb" 
+                    title="Inglés-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('fr')" value="Fr-Sb" 
+                    title="Francés-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('ptbr')" value="Pt-Sb" 
+                    title="Portugués-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('ru')" value="Ru-Sb" 
+                    title="Ruso-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeSection('conjugations')" value="Cjg" 
+                    title="Conjugaciones" />
+                    <br><br>
+                    <div id="es_result"></div>
+                </div>
+            
+                <div class="langSpecific frText">
+                    <h1>Dictionnaire Français-Sambahsa</h1>
+                    <br>
+                    <input type="text" class="inputTextArea" id="fr_inputTextArea" />
+                    <input type="button" id="fr_buttonDictionar" value="Rechercher" class="commonButton"
+                    onclick="startSbSearch ('listOfWordsFrench', 'fr_inputTextArea', 'fr_result', 3);" /><br><br>
+                    <p class="noindent">Changer la langue&nbsp;:</p>
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('en')" value="An-Sb" 
+                    title="Anglais-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('es')" value="Es-Sb" 
+                    title="Espagnol-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('ptbr')" value="Pt-Sb" 
+                    title="Portugais-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('ru')" value="Ru-Sb" 
+                    title="Russe-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeSection('conjugations')" value="Cjg" 
+                    title="Conjugaisons" />
+                    <br><br>
+                    <div id="fr_result"></div>
+                </div>
+            
+                <div class="langSpecific ptbrText">
+                    <h1>Dicionário Português-Sambahsa</h1>
+                    <br>
+                    <input type="text" class="inputTextArea" id="pt_inputTextArea" />
+                    <input type="button" id="pt_buttonDictionar" value="Pesquisar" class="commonButton"
+                    onclick="startSbSearch ('listOfWordsPortuguese', 'pt_inputTextArea', 'pt_result', 1);" /><br><br>
+                    <p class="noindent">Mudar idioma:</p>
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('en')" value="In-Sb" 
+                    title="Inglês-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('es')" value="Es-Sb" 
+                    title="Espanhol-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('fr')" value="Fr-Sb" 
+                    title="Francês-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('ru')" value="Ru-Sb" 
+                    title="Russo-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeSection('conjugations')" value="Cjg" 
+                    title="Conjugações" />
+                    <br><br>
+                    <div id="pt_result"></div>
+                </div>
+        
+                <div class="langSpecific ruText">
+                    <h1>Самбаса-русский словарь</h1>
+                    <br>
+                    <input type="text" class="inputTextArea" id="ru_inputTextArea" />
+                    <input type="button" id="ru_buttonDictionar" value="Поиск" class="commonButton"
+                    onclick="startSbSearch ('listOfWordsRussian', 'ru_inputTextArea', 'ru_result', 5);" /><br><br>
+                    <p class="noindent">Изменить язык:</p>
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('en')" value="Англ-Самб" 
+                    title="Английский-Самбаса" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('es')" value="Исп-Самб" 
+                    title="Испанский-Самбаса" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('fr')" value="Фр-Самб" 
+                    title="Французский-Самбаса" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguage('ptbr')" value="Порт-Самб" 
+                    title="Португальский-Самбаса" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeSection('conjugations')" value="Скл" 
+                    title="Склонения глаголов" />
+                    <br><br>
+                    <div id="ru_result"></div>
+                </div>
+                
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------- SECTION: SETTINGS ----------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+        
+            <div class="section" id="sectionSettings">
+        
+                <div class="langSpecific enText">
+                    <h1>SETTINGS</h1>
+                    <h2>Change language</h2>
+                </div>
+            
+                <div class="langSpecific esText">
+                    <h1>CONFIGURACIONES</h1>
+                    <h2>Cambiar idioma</h2>
+                </div>
+            
+                <div class="langSpecific frText">
+                    <h1>PARAMÈTRES</h1>
+                    <h2>Changer la langue</h2>
+                </div>
+
+                <div class="langSpecific ptbrText">
+                    <h1>CONFIGURAÇÕES</h1>
+                    <h2>Mudar idioma</h2>
+                </div>
+            
+                <div class="langSpecific ruText">
+                    <h1>НАСТРОЙКИ</h1>
+                    <h2>Изменить язык</h2>
+                </div>
+        
+                <br>
+        
+                <div class="listOfButtons">
+                    <div class="smallButton" onclick="changeLanguage ('en')">English</div>
+                    <div class="smallButton" onclick="changeLanguage ('es')">Español</div>
+                    <div class="smallButton" onclick="changeLanguage ('fr')">Français</div>
+                    <div class="smallButton" onclick="changeLanguage ('ptbr')">Português</div>
+                    <div class="smallButton" onclick="changeLanguage ('ru')">Русский</div>
+                </div>
+
+                <br><br>
+
+                <div class="langSpecific enText">
+                    <h2>Toggle between dark and light mode</h2>
+                </div>
+            
+                <div class="langSpecific esText">
+                    <h2>Alternar entre el modo oscuro y el modo claro</h2>
+                </div>
+            
+                <div class="langSpecific frText">
+                    <h2>Basculer entre le mode sombre et le mode clair</h2>
+                </div>
+
+                <div class="langSpecific ptbrText">
+                    <h2>Alternar entre o modo escuro e o modo claro</h2>
+                </div>
+            
+                <div class="langSpecific ruText">
+                    <h2>Переключиться между темным и светлым режимом</h2>
+                </div>
+
+                <div class="changeBackgroundButton" id="changeBgButton" onclick="changeBackground()">🌜︎</div>
+
+                
+
+                <br><br>
+
+                <div class="noMobile">
+                    <div class="langSpecific enText">
+                        <h2>URL parameters:</h2>
+
+                        <p>You can use custom web addresses to go directly to a specific section, or even open the app in 
+                            a specific language or mode. It's very useful for web browses' bookmarks. Let's see some examples:
+                        </p>
+
+                        <ul>
+                            <li>
+                                <a href="/?section=dictionary" target="_blank">?section=dictionary</a>
+                                <em>(Opens directly in the dictionary sector)</em>
+                                <ul>
+                                    <p>Available options:</p>
+                                    <li><a href="/?section=dictionary" target="_blank">?section=dictionary</a></li>
+                                    <li><a href="/?section=settings" target="_blank">?section=settings</a></li>
+                                    <li><a href="/?section=transcriptor" target="_blank">?section=transcriptor</a></li>
+                                    <li><a href="/?section=conjugations" target="_blank">?section=conjugations</a></li>
+                                    <li><a href="/?section=declensions" target="_blank">?section=declensions</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/?mode=dark" target="_blank">?mode=dark</a>
+                                <em>(Opens app in the dar mode)</em>
+                            </li>
+                            <li>
+                                <a href="/?lang=ru" target="_blank">?lang=ru</a>
+                                <em>(Opens app in the Russian language)</em>
+                                <ul>
+                                    <p>Available options:</p>
+                                    <li><a href="/?lang=en" target="_blank">?lang=en</a></li>
+                                    <li><a href="/?lang=es" target="_blank">?lang=es</a></li>
+                                    <li><a href="/?lang=fr" target="_blank">?lang=fr</a></li>
+                                    <li><a href="/?lang=ptbr" target="_blank">?lang=ptbr</a></li>
+                                    <li><a href="/?lang=ru" target="_blank">?lang=ru</a></li>
+                                </ul>
+                            </li>
+                            <li>You can mix the parameters with &:
+                                <ul>
+                                    <li>
+                                        <a href="/?section=dictionary&lang=fr" target="_blank">?section=dictionary&lang=fr</a> 
+                                        <em>(the app starts with the dictionary section open in the French language)</em>
+                                    </li>
+                                    <li>
+                                        <a href="/?section=settings&lang=ptbr&mode=dark" target="_blank">?section=settings&lang=ptbr&mode=dark</a> 
+                                        <em>(the app starts with the settings section open in the Portuguese language, and in dark mode)</em>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                
+                    <div class="langSpecific esText">
+                        <h2>Parámetros de URL:</h2>
+
+                        <p>Puedes utilizar direcciones web personalizadas para ir directamente a una sección específica 
+                            o incluso abrir la aplicación en un idioma o modo específico. Es muy útil para los marcadores 
+                            de navegadores. Veamos algunos ejemplos:</p>
+
+                        <ul>
+                            <li>
+                                <a href="/?section=dictionary" target="_blank">?section=dictionary</a>
+                                <em>(Se abre directamente en el sector de diccionario)</em>
+                                <ul>
+                                    <p>Opciones disponibles:</p>
+                                    <li><a href="/?section=dictionary" target="_blank">?section=dictionary</a></li>
+                                    <li><a href="/?section=settings" target="_blank">?section=settings</a></li>
+                                    <li><a href="/?section=transcriptor" target="_blank">?section=transcriptor</a></li>
+                                    <li><a href="/?section=conjugations" target="_blank">?section=conjugations</a></li>
+                                    <li><a href="/?section=declensions" target="_blank">?section=declensions</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/?mode=dark" target="_blank">?mode=dark</a>
+                                <em>(Abre la aplicación en modo oscuro)</em>
+                            </li>
+                            <li>
+                                <a href="/?lang=ru" target="_blank">?lang=ru</a>
+                                <em>(Abre la aplicación en idioma ruso)</em>
+                                <ul>
+                                    <p>Opciones disponibles:</p>
+                                    <li><a href="/?lang=en" target="_blank">?lang=en</a></li>
+                                    <li><a href="/?lang=es" target="_blank">?lang=es</a></li>
+                                    <li><a href="/?lang=fr" target="_blank">?lang=fr</a></li>
+                                    <li><a href="/?lang=ptbr" target="_blank">?lang=ptbr</a></li>
+                                    <li><a href="/?lang=ru" target="_blank">?lang=ru</a></li>
+                                </ul>
+                            </li>
+                            <li>Puedes combinar los parámetros con &:
+                                <ul>
+                                    <li>
+                                        <a href="/?section=dictionary&lang=fr" target="_blank">?section=dictionary&lang=fr</a> 
+                                        <em>(La aplicación se inicia con la sección de diccionario abierta en idioma francés)</em>
+                                    </li>
+                                    <li>
+                                        <a href="/?section=settings&lang=ptbr&mode=dark" target="_blank">?section=settings&lang=ptbr&mode=dark</a> 
+                                        <em>(La aplicación se inicia con la sección de configuración abierta en idioma portugués y en modo oscuro)</em>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                
+                    <div class="langSpecific frText">
+                        <h2>Paramètres d'URL :</h2>
+
+                        <p>Vous pouvez utiliser des adresses web personnalisées pour accéder directement à une section spécifique 
+                            ou même ouvrir l'application dans une langue ou un mode spécifique. C'est très utile pour les favoris 
+                            de navigateurs web. Voici quelques exemples&nbsp;:</p>
+
+                        <ul>
+                            <li>
+                                <a href="/?section=dictionary" target="_blank">?section=dictionary</a>
+                                <em>(S'ouvre directement dans la section du dictionnaire)</em>
+                                <ul>
+                                    <p>Options disponibles :</p>
+                                    <li><a href="/?section=dictionary" target="_blank">?section=dictionary</a></li>
+                                    <li><a href="/?section=settings" target="_blank">?section=settings</a></li>
+                                    <li><a href="/?section=transcriptor" target="_blank">?section=transcriptor</a></li>
+                                    <li><a href="/?section=conjugations" target="_blank">?section=conjugations</a></li>
+                                    <li><a href="/?section=declensions" target="_blank">?section=declensions</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/?mode=dark" target="_blank">?mode=dark</a>
+                                <em>(Ouvre l'application en mode sombre)</em>
+                            </li>
+                            <li>
+                                <a href="/?lang=ru" target="_blank">?lang=ru</a>
+                                <em>(Ouvre l'application en russe)</em>
+                                <ul>
+                                    <p>Options disponibles :</p>
+                                    <li><a href="/?lang=en" target="_blank">?lang=en</a></li>
+                                    <li><a href="/?lang=es" target="_blank">?lang=es</a></li>
+                                    <li><a href="/?lang=fr" target="_blank">?lang=fr</a></li>
+                                    <li><a href="/?lang=ptbr" target="_blank">?lang=ptbr</a></li>
+                                    <li><a href="/?lang=ru" target="_blank">?lang=ru</a></li>
+                                </ul>
+                            </li>
+                            <li>Vous pouvez combiner les paramètres avec &&nbsp;:
+                                <ul>
+                                    <li>
+                                        <a href="/?section=dictionary&lang=es" target="_blank">?section=dictionary&lang=es</a> 
+                                        <em>(L'application démarre avec la section du dictionnaire ouverte en espagnol)</em>
+                                    </li>
+                                    <li>
+                                        <a href="/?section=settings&lang=ptbr&mode=dark" target="_blank">?section=settings&lang=ptbr&mode=dark</a> 
+                                        <em>(L'application démarre avec la section des paramètres ouverte en portugais et en mode sombre)</em>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="langSpecific ptbrText">
+                        <h2>Parâmetros de URL:</h2>
+
+                        <p>Você pode usar endereços da web personalizados para ir diretamente para uma seção específica 
+                            ou até mesmo abrir o aplicativo em um idioma ou modo específico. Isso é muito útil para favoritos 
+                            de navegadores. Veja alguns exemplos:</p>
+
+                        <ul>
+                            <li>
+                                <a href="/?section=dictionary" target="_blank">?section=dictionary</a>
+                                <em>(Abre diretamente na seção de dicionário)</em>
+                                <ul>
+                                    <p>Opções disponíveis:</p>
+                                    <li><a href="/?section=dictionary" target="_blank">?section=dictionary</a></li>
+                                    <li><a href="/?section=settings" target="_blank">?section=settings</a></li>
+                                    <li><a href="/?section=transcriptor" target="_blank">?section=transcriptor</a></li>
+                                    <li><a href="/?section=conjugations" target="_blank">?section=conjugations</a></li>
+                                    <li><a href="/?section=declensions" target="_blank">?section=declensions</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/?mode=dark" target="_blank">?mode=dark</a>
+                                <em>(Abre o aplicativo no modo escuro)</em>
+                            </li>
+                            <li>
+                                <a href="/?lang=ru" target="_blank">?lang=ru</a>
+                                <em>(Abre o aplicativo em russo)</em>
+                                <ul>
+                                    <p>Opções disponíveis:</p>
+                                    <li><a href="/?lang=en" target="_blank">?lang=en</a></li>
+                                    <li><a href="/?lang=es" target="_blank">?lang=es</a></li>
+                                    <li><a href="/?lang=fr" target="_blank">?lang=fr</a></li>
+                                    <li><a href="/?lang=ptbr" target="_blank">?lang=ptbr</a></li>
+                                    <li><a href="/?lang=ru" target="_blank">?lang=ru</a></li>
+                                </ul>
+                            </li>
+                            <li>Você pode combinar os parâmetros com &:
+                                <ul>
+                                    <li>
+                                        <a href="/?section=dictionary&lang=fr" target="_blank">?section=dictionary&lang=fr</a> 
+                                        <em>(O aplicativo começa com a seção de dicionário aberta em francês)</em>
+                                    </li>
+                                    <li>
+                                        <a href="/?section=settings&lang=en&mode=dark" target="_blank">?section=settings&lang=en&mode=dark</a> 
+                                        <em>(O aplicativo começa com a seção de configurações aberta em inglês e no modo escuro)</em>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                
+                    <div class="langSpecific ruText">
+                        <h2>Параметры URL:</h2>
+                        <p>Вы можете использовать пользовательские веб-адреса, чтобы сразу перейти к определенному 
+                            разделу или даже открыть приложение на определенном языке или в режиме. Это очень полезно 
+                            для закладок в веб-браузерах. Давайте посмотрим на несколько примеров:</p>
+                        <ul>
+                            <li>
+                                <a href="/?section=dictionary" target="_blank">?section=dictionary</a>
+                                <em>(Открывается непосредственно в разделе словаря)</em>
+                                <ul>
+                                    <p>Доступные варианты:</p>
+                                    <li><a href="/?section=dictionary" target="_blank">?section=dictionary</a></li>
+                                    <li><a href="/?section=settings" target="_blank">?section=settings</a></li>
+                                    <li><a href="/?section=transcriptor" target="_blank">?section=transcriptor</a></li>
+                                    <li><a href="/?section=conjugations" target="_blank">?section=conjugations</a></li>
+                                    <li><a href="/?section=declensions" target="_blank">?section=declensions</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/?mode=dark" target="_blank">?mode=dark</a>
+                                <em>(Открывает приложение в темном режиме)</em>
+                            </li>
+                            <li>
+                                <a href="/?lang=es" target="_blank">?lang=es</a>
+                                <em>(Открывает приложение на испанском языке)</em>
+                                <ul>
+                                    <p>Доступные варианты:</p>
+                                    <li><a href="/?lang=en" target="_blank">?lang=en</a></li>
+                                    <li><a href="/?lang=es" target="_blank">?lang=es</a></li>
+                                    <li><a href="/?lang=fr" target="_blank">?lang=fr</a></li>
+                                    <li><a href="/?lang=ptbr" target="_blank">?lang=ptbr</a></li>
+                                    <li><a href="/?lang=ru" target="_blank">?lang=ru</a></li>
+                                </ul>
+                            </li>
+                            <li>Вы можете комбинировать параметры с &:</li>
+                            <ul>
+                                <li>
+                                    <a href="/?section=dictionary&lang=fr" target="_blank">?section=dictionary&lang=fr</a> 
+                                    <em>(приложение запускается с открытым разделом словаря на французском языке)</em>
+                                </li>
+                                <li>
+                                    <a href="/?section=settings&lang=ptbr&mode=dark" target="_blank">?section=settings&lang=ptbr&mode=dark</a> 
+                                    <em>(приложение запускается с открытым разделом настроек на португальском языке и в темном режиме)</em>
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+        
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------- SECTION: WHAT IS ------------------------------------------>
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+
+            <div class="section" id="whatis">
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- English text --------------------------------->
+                <div class="langSpecific enText">
+
+                    <h1>What is Sambahsa?</h1>
+
+                    <p><strong>Sambahsa-Mundialect</strong> is an auxiliary language created by the French Dr. Olivier 
+                        Simon that had been released on the Internet in 2007. An auxiliary language has 
+                        the role of allowing the communication between different people whose mother 
+                        tongues are different, something that English makes possible nowadays, 
+                        however an auxiliary language has the differential of being easier to learn; 
+                        while it took years for a non-native to master English, it took only a matter 
+                        of months to master an auxiliary language.</p>
+
+
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- Spanish text --------------------------------->
+                <div class="langSpecific esText">
+
+                    <h1>¿Qué es sambahsa?</h1>
+
+                    <p><strong>Sambahsa-Mundialect</strong> es una lengua auxiliar creada por el Dr. Olivier Simon, 
+                        un francés, que se publicó en Internet en 2007. Una lengua auxiliar tiene la 
+                        función de permitir la comunicación entre personas cuyas lenguas maternas son 
+                        diferentes, algo que el inglés hace posible en la actualidad. Sin embargo, una 
+                        lengua auxiliar tiene la ventaja de ser más fácil de aprender. Mientras que 
+                        llevaría años a un no nativo dominar el inglés, solo se necesitaría cuestión 
+                        de meses para dominar una lengua auxiliar.</p>
+
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- French text ---------------------------------->
+                <div class="langSpecific frText">
+
+                    <h1>Qu'est-ce que Sambahsa&nbsp;?</h1>
+
+                    <p><strong>Sambahsa-Mundialect</strong> est une langue auxiliaire créée par le Dr. Olivier Simon, 
+                        un Français, qui a été mise en ligne sur Internet en 2007. Une langue auxiliaire 
+                        a pour rôle de permettre la communication entre des personnes dont les 
+                        langues maternelles sont différentes, ce que l'anglais permet de nos jours. 
+                        Cependant, une langue auxiliaire a l'avantage d'être plus facile à apprendre. 
+                        Alors qu'il faut des années à un non-natif pour maîtriser l'anglais, il ne faut 
+                        que quelques mois pour maîtriser une langue auxiliaire.</p>
+
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- Russian text --------------------------------->
+                <div class="langSpecific ruText">
+
+                    <h1>Что такое Самбахса?</h1>
+
+                    <p><strong>Самбаса-Мундиалект</strong> - это вспомогательный язык, созданный французским доктором 
+                        Оливье Симоном и выпущенный в Интернете в 2007 году. Вспомогательный язык 
+                        выполняет функцию обеспечения коммуникации между людьми, у которых разные 
+                        родные языки, что в настоящее время делает возможным английский. Однако 
+                        вспомогательный язык имеет преимущество в том, что его легче изучать; в то 
+                        время как для не-родного диктора потребовалось бы годы, чтобы овладеть 
+                        английским, для овладения вспомогательным языком потребовалось бы всего 
+                        несколько месяцев.</p>
+
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!-------------------------- Brazilian Portuguese text --------------------------->
+                <div class="langSpecific ptbrText">
+
+                    <h1>O que é sambahsa?</h1>
+
+                    <p><strong>Sambahsa-Mundialect</strong> é uma língua auxiliar criada pelo francês Dr. Olivier Simon 
+                        que fora lançada na internet em 2007. Uma língua auxiliar tem a função de permitir 
+                        a comunicação entre diferentes pessoas cujas línguas maternas são diferentes, algo 
+                        que o inglês permite hoje em dia, entretanto uma língua auxiliar tem o diferencial 
+                        de ser muito mas fácil de aprender; enquanto você levaria anos para dominar a 
+                        língua inglesa, você pode aprender uma língua auxiliar em questão de meses.</p>
+
+                </div>
+                
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!------------------------------------ SECTION: TRANSCRIPTOR ---------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+
+            <div class="section" id="transcriptor">
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- English text --------------------------------->
+                <div class="langSpecific enText">
+                    <h1>Phonetic Transcriptor</h1>
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- Spanish text --------------------------------->
+                <div class="langSpecific esText">
+                    <h1>Transcriptor Fonético</h1>
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- French text ---------------------------------->
+                <div class="langSpecific frText">
+                    <h1>Transcripteur Phonétique</h1>
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!--------------------------------- Russian text --------------------------------->
+                <div class="langSpecific ruText">
+                    <h1>Фонетический Транскриптор</h1>
+                </div>
+
+
+                <!-------------------------------------------------------------------------------->
+                <!-------------------------- Brazilian Portuguese text --------------------------->
+                <div class="langSpecific ptbrText">
+                    <h1>Transcritor Fonético</h1>
+                </div>
+                
+
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'ipa_tab')">AFI</button>
+                    <button class="tablinks" onclick="openTab(event, 'spt_tab')">SPT</button>
+                </div>
+
+                <div id="ipa_tab" class="tabcontent" style="display: block;">
+                    <textarea class="transcriptorInputTextArea" id="transcriptorInputTextArea2"></textarea>
+                        <br>
+                        <button type="button" onclick="getWords ('transcriptorInputTextArea2', 'spt_outputTextArea', 'ipa_outputTextArea', 1);" 
+                        style="margin-right: 20px; display: inline;" class="commonButton" id="ipa_tab_button"><strong>»»</strong></button>
+                        <div style="height: 10px;"></div>
+                        <div id="ipa_outputTextArea"></div>
+                        <!-- <input type="button" id="en_buttonDictionar" value="Search" class="commonButton"
+                    onclick="startSbSearch ('listOfWordsEnglish', 'en_inputTextArea', 'en_result', 99);" /> -->
+                </div>
+                
+                <div id="spt_tab" class="tabcontent">
+                <textarea class="transcriptorInputTextArea" id="transcriptorInputTextArea1"></textarea>
+                    <br>
+                    <button type="button" onclick="getWords ('transcriptorInputTextArea1', 'spt_outputTextArea', 'ipa_outputTextArea', 0);" 
+                    style="margin-right: 20px; display: inline;" class="commonButton"  id="spt_tab_button"><strong>»»</strong></button>
+                    <div style="height: 10px;"></div>
+                    <div id="spt_outputTextArea"></div>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!------------------------------------ SECTION: CONJUGATIONS ---------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+
+            <div class="section" id="conjugations">
+
+                <div class="langSpecific enText">
+                    <h1>Dictionary of Verb Conjugations</h1>
+                </div>
+            
+                <div class="langSpecific esText">
+                    <h1>Diccionario de Conjugaciones de Verbos</h1>
+                </div>
+            
+                <div class="langSpecific frText">
+                    <h1>Dictionnaire des Conjugaisons de Verbes</h1>
+                </div>
+            
+                <div class="langSpecific ptbrText">
+                    <h1>Dicionário de Conjugações de Verbos</h1>
+                </div>
+        
+                <div class="langSpecific ruText">
+                    <h1>Словарь спряжений глаголов</h1>
+                </div>
+
+                <br>
+                <input type="text" class="inputTextArea" id="cjg_inputTextArea" />
+                <input type="button" id="en_buttonDictionar" value="»»" onclick="startSbSearch ('listOfConjugations', 'cjg_inputTextArea', 'cjg_result', 0);" />
+                <br><br>
+                <div class="langSpecific enText">
+                    Change dictionary:<br>
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('en', 'sectionDictionary')" value="En-Sb" 
+                    title="English-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('es', 'sectionDictionary')" value="Es-Sb" 
+                    title="Spanish-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('fr', 'sectionDictionary')" value="Fr-Sb" 
+                    title="French-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('ptbr', 'sectionDictionary')" value="Pt-Sb" 
+                    title="Portuguese-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('ru', 'sectionDictionary')" value="Ru-Sb" 
+                    title="Russian-Sambahsa" />
+                </div>
+                <div class="langSpecific esText">
+                    Cambiar diccionario:<br>
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('en', 'sectionDictionary')" value="In-Sb" 
+                    title="Inglés-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('es', 'sectionDictionary')" value="Es-Sb" 
+                    title="Español-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('fr', 'sectionDictionary')" value="Fr-Sb" 
+                    title="Francés-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('ptbr', 'sectionDictionary')" value="Pt-Sb" 
+                    title="Portugués-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('ru', 'sectionDictionary')" value="Ru-Sb" 
+                    title="Ruso-Sambahsa" />
+                </div>
+                <div class="langSpecific frText">
+                    Changer de dictionnaire&nbsp;:<br>
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('en', 'sectionDictionary')" value="An-Sb" 
+                    title="Anglais-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('es', 'sectionDictionary')" value="Es-Sb" 
+                    title="Espagnol-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('fr', 'sectionDictionary')" value="Fr-Sb" 
+                    title="Français-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('ptbr', 'sectionDictionary')" value="Pt-Sb" 
+                    title="Portugais-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('ru', 'sectionDictionary')" value="Ru-Sb" 
+                    title="Russe-Sambahsa" />
+                </div>
+                <div class="langSpecific ptbrText">
+                    Mudar o dicionário:<br>
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('en', 'sectionDictionary')" value="In-Sb" 
+                    title="Inglês-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('es', 'sectionDictionary')" value="Es-Sb" 
+                    title="Espanhol-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('fr', 'sectionDictionary')" value="Fr-Sb" 
+                    title="Francês-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('ptbr', 'sectionDictionary')" value="Pt-Sb" 
+                    title="Português-Sambahsa" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('ru', 'sectionDictionary')" value="Ru-Sb" 
+                    title="Russo-Sambahsa" />
+                </div>
+                <div class="langSpecific ruText">
+                    Изменить словарь:<br>
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('en', 'sectionDictionary')" value="Англ-Самб" 
+                    title="Английский-Самбаса" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('es', 'sectionDictionary')" value="Исп-Самб" 
+                    title="Испанский-Самбаса" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('fr', 'sectionDictionary')" value="Фр-Самб" 
+                    title="Французский-Самбаса" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('ptbr', 'sectionDictionary')" value="Порт-Самб" 
+                    title="Португальский-Самбаса" />
+                    <input type="button" class="changeLanguageDictButton" onclick="changeLanguageAndSection('ru', 'sectionDictionary')" value="Рус-Самб" 
+                    title="Русско-Самбаса" />
+                </div>
+                <br><br>
+                <div id="cjg_result"></div>
+
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!---------------------------------- SECTION: LIST OF DECLENSIONS ----------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
+
+            <div class="section" id="declensions">
+
+                <div class="langSpecific enText">
+                    <h1>List of Declensions</h1>
+                </div>
+            
+                <div class="langSpecific esText">
+                    <h1>Lista de Declinaciones</h1>
+                </div>
+            
+                <div class="langSpecific frText">
+                    <h1>Liste des Déclinaisons</h1>
+                </div>
+            
+                <div class="langSpecific ptbrText">
+                    <h1>Lista de Declinações</h1>
+                </div>
+        
+                <div class="langSpecific ruText">
+                    <h1>Список склонений</h1>
+                </div>
+
+                <table class="declensionTable">
+                    <tr style="background-color: #262626; color: #FFFFFF; border-color: #000000;">
+                        <th style="width: 25%;">
+                            <span class="langSpecific enText">Nominative</span>
+                            <span class="langSpecific esText">Nominativo</span>
+                            <span class="langSpecific frText">Nominatif</span>
+                            <span class="langSpecific ptbrText">Nominativo</span>
+                            <span class="langSpecific ruText">Именительный</span>
+                        </th>
+                        <th style="width: 25%;">
+                            <span class="langSpecific enText">Accusative</span>
+                            <span class="langSpecific esText">Acusativo</span>
+                            <span class="langSpecific frText">Accusatif</span>
+                            <span class="langSpecific ptbrText">Acusativo</span>
+                            <span class="langSpecific ruText">Винительный</span>
+                        </th>
+                        <th style="width: 25%;">
+                            <span class="langSpecific enText">Dative</span>
+                            <span class="langSpecific esText">Dativo</span>
+                            <span class="langSpecific frText">Datif</span>
+                            <span class="langSpecific ptbrText">Dativo</span>
+                            <span class="langSpecific ruText">Дательный</span>
+                        </th>
+                        <th style="width: 25%;">
+                            <span class="langSpecific enText">Genitive</span>
+                            <span class="langSpecific esText">Genitivo</span>
+                            <span class="langSpecific frText">Génitif</span>
+                            <span class="langSpecific ptbrText">Genitivo</span>
+                            <span class="langSpecific ruText">Родительный</span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">ego / io</td>
+                        <td class="tdAccusative">me</td>
+                        <td class="tdDative">mi</td>
+                        <td class="tdGenitive">—</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">tu</td>
+                        <td class="tdAccusative">te</td>
+                        <td class="tdDative">tib</td>
+                        <td class="tdDative">—</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">is</td>
+                        <td class="tdAccusative">iom</td>
+                        <td class="tdDative">ei</td>
+                        <td class="tdGenitive">ios</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">ia</td>
+                        <td class="tdAccusative">iam</td>
+                        <td class="tdDative">ay</td>
+                        <td class="tdGenitive">ias</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">id</td>
+                        <td class="tdAccusative">id</td>
+                        <td class="tdDative">ei</td>
+                        <td class="tdGenitive">ios</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">el</td>
+                        <td class="tdAccusative">el</td>
+                        <td class="tdDative">al</td>
+                        <td class="tdGenitive">al</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">wey</td>
+                        <td class="tdAccusative">nos</td>
+                        <td class="tdDative">nos</td>
+                        <td class="tdGenitive">—</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">yu</td>
+                        <td class="tdAccusative">vos</td>
+                        <td class="tdDative">vos</td>
+                        <td class="tdGenitive">—</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">ies</td>
+                        <td class="tdAccusative">iens</td>
+                        <td class="tdDative">ibs</td>
+                        <td class="tdGenitive">iom</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">ias</td>
+                        <td class="tdAccusative">ians</td>
+                        <td class="tdDative">iabs</td>
+                        <td class="tdGenitive">iam</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">ia</td>
+                        <td class="tdAccusative">ia</td>
+                        <td class="tdDative">ibs</td>
+                        <td class="tdGenitive">iom</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">i</td>
+                        <td class="tdAccusative">i</td>
+                        <td class="tdDative">im</td>
+                        <td class="tdGenitive">im</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">so</td>
+                        <td class="tdAccusative">tom</td>
+                        <td class="tdDative">tei</td>
+                        <td class="tdGenitive">tos</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">toy</td>
+                        <td class="tdAccusative">tens</td>
+                        <td class="tdDative">tibs</td>
+                        <td class="tdGenitive">tom</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">sa</td>
+                        <td class="tdAccusative">tam</td>
+                        <td class="tdDative">tay</td>
+                        <td class="tdGenitive">tas</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">tas</td>
+                        <td class="tdAccusative">tans</td>
+                        <td class="tdDative">tabs</td>
+                        <td class="tdGenitive">tam</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">tod</td>
+                        <td class="tdAccusative">tod</td>
+                        <td class="tdDative">tei</td>
+                        <td class="tdGenitive">tos</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">ta</td>
+                        <td class="tdAccusative">ta</td>
+                        <td class="tdDative">tibs</td>
+                        <td class="tdGenitive">tom</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">tel</td>
+                        <td class="tdAccusative">tel</td>
+                        <td class="tdDative">tal</td>
+                        <td class="tdGenitive">tal</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">ti</td>
+                        <td class="tdAccusative">ti</td>
+                        <td class="tdDative">tim</td>
+                        <td class="tdGenitive">tim</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">cis</td>
+                        <td class="tdAccusative">ciom</td>
+                        <td class="tdDative">cei</td>
+                        <td class="tdGenitive">cios</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">cies</td>
+                        <td class="tdAccusative">ciens</td>
+                        <td class="tdDative">cibs</td>
+                        <td class="tdGenitive">ciom</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">cia</td>
+                        <td class="tdAccusative">ciam</td>
+                        <td class="tdDative">ciay</td>
+                        <td class="tdGenitive">cias</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">cias</td>
+                        <td class="tdAccusative">cians</td>
+                        <td class="tdDative">ciabs</td>
+                        <td class="tdGenitive">ciam</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">cid</td>
+                        <td class="tdAccusative">cid</td>
+                        <td class="tdDative">cei</td>
+                        <td class="tdGenitive">cios</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">cia</td>
+                        <td class="tdAccusative">cia</td>
+                        <td class="tdDative">cibs</td>
+                        <td class="tdGenitive">ciom</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">cel</td>
+                        <td class="tdAccusative">cel</td>
+                        <td class="tdDative">cial</td>
+                        <td class="tdGenitive">cial</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">ci</td>
+                        <td class="tdAccusative">ci</td>
+                        <td class="tdDative">cim</td>
+                        <td class="tdGenitive">cim</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">qui</td>
+                        <td class="tdAccusative">quom</td>
+                        <td class="tdDative">quei</td>
+                        <td class="tdGenitive">quos</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">quis</td>
+                        <td class="tdAccusative">quom</td>
+                        <td class="tdDative">quei</td>
+                        <td class="tdGenitive">quos</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">quoy</td>
+                        <td class="tdAccusative">quens</td>
+                        <td class="tdDative">quibs</td>
+                        <td class="tdGenitive">quom</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">qua</td>
+                        <td class="tdAccusative">quam</td>
+                        <td class="tdDative">quay</td>
+                        <td class="tdGenitive">quas</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">quas</td>
+                        <td class="tdAccusative">quans</td>
+                        <td class="tdDative">quabs</td>
+                        <td class="tdGenitive">quam</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">quod</td>
+                        <td class="tdAccusative">quod</td>
+                        <td class="tdDative">quei</td>
+                        <td class="tdGenitive">quos</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">qua</td>
+                        <td class="tdAccusative">qua</td>
+                        <td class="tdDative">quibs</td>
+                        <td class="tdGenitive">quom</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">quel</td>
+                        <td class="tdAccusative">quel</td>
+                        <td class="tdDative">qual</td>
+                        <td class="tdGenitive">qual</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">qui</td>
+                        <td class="tdAccusative">qui</td>
+                        <td class="tdDative">quim</td>
+                        <td class="tdGenitive">quim</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">neis</td>
+                        <td class="tdAccusative">niom</td>
+                        <td class="tdDative">nei</td>
+                        <td class="tdGenitive">nios</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">noy</td>
+                        <td class="tdAccusative">niens</td>
+                        <td class="tdDative">neibs</td>
+                        <td class="tdGenitive">niom</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">nia</td>
+                        <td class="tdAccusative">niam</td>
+                        <td class="tdDative">niay</td>
+                        <td class="tdGenitive">nias</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">nias</td>
+                        <td class="tdAccusative">nians</td>
+                        <td class="tdDative">niabs</td>
+                        <td class="tdGenitive">niam</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">neid</td>
+                        <td class="tdAccusative">neid</td>
+                        <td class="tdDative">nei</td>
+                        <td class="tdGenitive">nios</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">nia</td>
+                        <td class="tdAccusative">nia</td>
+                        <td class="tdDative">neibs</td>
+                        <td class="tdGenitive">niom</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">nel</td>
+                        <td class="tdAccusative">nel</td>
+                        <td class="tdDative">nal</td>
+                        <td class="tdGenitive">nal</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">nei</td>
+                        <td class="tdAccusative">nei</td>
+                        <td class="tdDative">nim</td>
+                        <td class="tdGenitive">nim</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">to</td>
+                        <td class="tdAccusative">to</td>
+                        <td class="tdDative">ad to</td>
+                        <td class="tdGenitive">os to</td>
+                    </tr>
+                    <tr>
+                        <td class="tdNominative">quo</td>
+                        <td class="tdAccusative">quo</td>
+                        <td class="tdDative">ad quo</td>
+                        <td class="tdGenitive">os quo</td>
+                    </tr>
+                </table>
+
+                <br>
+            </div>
+
+        </div>
+
+
+
+
+        <!--------------------------------------------------------------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------->
+        <!----------------------------------------- SECTION: MENU ------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------->
+
+        <div id="topNavExtraSpace"></div>
+        <nav>
+            <div class="menuItem" id="menuButtonHome" onclick="changeSection ('sectionHome')">
+                <img class="menuIcon" src="resources/img/icons/home.svg" />
+                Home
+            </div>
+            <div class="menuItem" id="menuButtonDictionary" onclick="changeSection ('sectionDictionary')">
+                <img class="menuIcon" src="resources/img/icons/books.svg" />
+                Dictionary
+            </div>
+            <div class="menuItem" id="menuButtonTranscriptor" onclick="changeSection ('transcriptor')">
+                <img class="menuIcon" src="resources/img/icons/brackets.svg" />
+                Transcriptor
+            </div>
+            <div class="menuItem" id="menuButtonSettings" onclick="changeSection ('sectionSettings')">
+                <img class="menuIcon" src="resources/img/icons/cog.svg" />
+                Settings
+            </div>
+        </nav>
+
+        <div class="listOfWords" id="listOfWordsEnglish"></div>
+        <div class="listOfWords" id="listOfWordsSpanish"></div>
+        <div class="listOfWords" id="listOfWordsFrench"></div>
+        <div class="listOfWords" id="listOfWordsPortuguese"></div>
+        <div class="listOfWords" id="listOfWordsRussian"></div>
+        <div class="listOfWords" id="listOfConjugations"></div>
+
+        <script>
+
+            window.addEventListener("keypress", (event) => {
+                if (event.keyCode == 13) {
+
+                    let currentSection = document.getElementsByTagName('html')[0].getAttribute("currentSection");
+                    let lang = document.getElementsByTagName('html')[0].getAttribute("lang");
+
+                    let ipa_tab = document.getElementById("ipa_tab");
+                    let spt_tab = document.getElementById("spt_tab");
+
+                    if (currentSection == "sectionDictionary") {
+                        if (lang == "es") {
+                            startSbSearch ('listOfWordsSpanish', 'es_inputTextArea', 'es_result', 2);
+                        }
+                        else if (lang == "fr") {
+                            startSbSearch ('listOfWordsFrench', 'fr_inputTextArea', 'fr_result', 3);
+                        }
+                        else if (lang == "pt-BR" || lang == "pt") {
+                            startSbSearch ('listOfWordsPortuguese', 'pt_inputTextArea', 'pt_result', 1);
+                        }
+                        else if (lang == "ru") {
+                            startSbSearch ('listOfWordsRussian', 'ru_inputTextArea', 'ru_result', 5);
+                        }
+                        else {
+                            startSbSearch ('listOfWordsEnglish', 'en_inputTextArea', 'en_result', 99);
+                        }
+                    }
+                    else if (currentSection == "conjugations") {
+                        startSbSearch ('listOfConjugations', 'cjg_inputTextArea', 'cjg_result', 0);
+                    }
+                    else if (currentSection == "transcriptor") {
+                        if (spt_tab.style.display == "block") {
+                            getWords ('transcriptorInputTextArea1', 'spt_outputTextArea', 'ipa_outputTextArea', 0);
+                        }
+                        else {
+                            getWords ('transcriptorInputTextArea2', 'spt_outputTextArea', 'ipa_outputTextArea', 1);
+                        }
+                    }
+                }
+            })
+        </script>
+        <script>
+            if('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw.js', { scope: '/' });
+            }
+        </script>
+    </body>
+</html>
