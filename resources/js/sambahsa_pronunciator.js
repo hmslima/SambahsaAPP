@@ -2,7 +2,7 @@
 **********************************************************************
 *** Author: Henrique Matheus da Silva Lima ***************************
 *** License: MIT *****************************************************
-*** Version: 2.00 ****************************************************
+*** Version: 2.01 ****************************************************
 **********************************************************************
 *********************************************************************/
 
@@ -4141,6 +4141,16 @@ function pronunciator (word, spt_outputDiv, ipa_outputDiv) {
 		console.log ("%% The word \"" + word + "\" needed a ready made transcription %%");
 		spt_word = "ef a ku";
 		ipa_word = "ef a ku";
+	}
+	else if (word == "feelik") {
+		console.log ("%% The word \"" + word + "\" needed a ready made transcription %%");
+		spt_word = "f<strong><u>e</u></strong>əlik";
+		ipa_word = "fEëlik";
+	}
+	else if (word == "feeliks") {
+		console.log ("%% The word \"" + word + "\" needed a ready made transcription %%");
+		spt_word = "f<strong><u>e</u></strong>əliks";
+		ipa_word = "fEëliks";
 	}
 	else if (word == "fingherstus") {
 		console.log ("%% The word \"" + word + "\" needed a ready made transcription %%");
